@@ -22,7 +22,16 @@ const FONTS = {
   },
 }
 
-const colors = {}
+const COLORS = {
+    GREYSCALE: {
+        '000': '#F5F5F5',
+        '900': '#212121',
+    },
+    BLACK: '#000',
+    WHITE: '#FFF',
+}
+
+const color = {}
 
 const typography = {
     // Display
@@ -80,10 +89,11 @@ const typography = {
     `,
   }
   
-const theme = { colors, FONTS, typography }
+const theme = { color, FONTS, typography }
 
 export default theme
 
-export type Colors = typeof colors
-export type Fonts = typeof FONTS
+export type COLORS = typeof COLORS
+export type Color = typeof color
+export type FONTS = typeof FONTS
 export type Typography = typeof typography
