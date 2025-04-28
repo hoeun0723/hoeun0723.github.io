@@ -27,5 +27,8 @@ export default Layout
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    height: 100%;
+    padding-top: 100px;
+    > main {
+        height: 100vh;
+    }
 `

@@ -16,6 +16,9 @@ export const Container = styled.header<{isHidden: boolean}>`
     opacity: ${({isHidden})=> (isHidden? 0 : 1)};
     transition: top 0.5s, opacity 0.5s;
     z-index: 999;
+    width: 100vw;
+    height: 100px;
+    box-sizing: border-box;
 `
 
 export const BlogTitle = styled.div``
