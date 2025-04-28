@@ -41,7 +41,7 @@ const GoToMainButton = styled(Link)`
   }
 `
 
-const NotFoundPage: FunctionComponent = function () {
+const NotFoundPage = ()=> {
   return(
     <NotFoundPageWrapper>
       <GlobalStyle/>
