@@ -89,5 +89,18 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: 'Dark (Visual Studio)', // Or install your favorite theme from GitHub
+            },
+          },
+        ],
+      },
+    },
   ],
 }
