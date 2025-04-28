@@ -1,13 +1,12 @@
 import styled from '@emotion/styled'
 import {Link} from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import React, {FunctionComponent} from 'react'
 
 import {PostFrontmatterType} from '@/types/PostItem.types'
 
-type PostItemProps = PostFrontmatterType & {link: string}
+interface PostItemProps extends PostFrontmatterType {link: string}
 
-const PostItem: FunctionComponent<PostItemProps> = function ({
+const PostItem= ({
     title,
     date,
     categories,
@@ -16,7 +15,7 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
         childImageSharp: {gatsbyImageData},
     },
     link,
-}) {
+}:PostItemProps) =>{
     return(
         <PostItemWrapper to={link}>
             <ThumbnailImage image={gatsbyImageData} alt="Post Item Image"/>

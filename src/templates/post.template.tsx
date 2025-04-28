@@ -1,19 +1,59 @@
-import React, {FunctionComponent} from 'react'
+import React from 'react'
 import {graphql} from 'gatsby'
 
-type PostTemplateProps = {}
+import PostContent from '@/components/PostDetail/PostContent'
+import PostHeader from '@/components/PostDetail/PostHeader'
+import Layout from '@/Layout'
+import { PostFrontmatterType } from '@/types/PostItem.types'
 
-const PostTemplate: FunctionComponent<PostTemplateProps> = function (props) {
-    console.log(props)
+export interface PostPageItemType {
+    node: {
+        html: string
+        frontmatter: PostFrontmatterType
+    }
+}
 
-    return <div>Post Template</div>
+interface PostTemplateProps {
+    data: {
+        allMarkdownRemark: {
+            edges: PostPageItemType[] // 존재하지 않는 타입이므로 에러가 발생하지만 일단 작성
+        }
+    }
+}
+
+const PostTemplate = ({
+    data: {
+        allMarkdownRemark: {edges},
+    },
+}:PostTemplateProps)=> {
+    const {
+        node: {
+            html,
+            frontmatter: {
+                title,
+                summary,
+                date,
+                categories,
+                thumbnail: {
+                    childImageSharp: {gatsbyImageData},
+                },
+            },
+        },
+    } = edges[0]
+
+    return (
+        <Layout>
+            <PostHeader title={title} date={date} categories={categories} thumbnail={gatsbyImageData}/>
+            <PostContent html={html}/>
+        </Layout>
+    )
 }
 
 export default PostTemplate
 
 export const queryMarkdownDataBySlug = graphql`
     query queryMarkdownDataBySlug($slug: String) {
-        allMarkdownRemark(filter: {field: {slug: {eq: $slug}}}) {
+        allMarkdownRemark(filter: {fields: {slug: {eq: $slug}}}) {
             edges {
                 node {
                     html
