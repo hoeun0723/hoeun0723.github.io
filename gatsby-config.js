@@ -1,7 +1,7 @@
 const blogConfig = require('./blog-config')
 
 module.exports = {
-  pathPrefix: "/hoeunw.github.io",
+  pathPrefix: "/hoeun0723.github.io",
   siteMetadata: { ...blogConfig },
   plugins: [
     {

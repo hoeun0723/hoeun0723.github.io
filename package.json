@@ -1,6 +1,6 @@
 {
   "name": "hoeun-blog",
-  "homepage": "https://hoeunw.github.io",
+  "homepage": "https://hoeun0723.github.io",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hoeun0723/hoeunw.github.io"
+    "url": "https://github.com/hoeun0723/hoeun0723.github.io"
   },
   "bugs": {
-    "url": "https://github.com/hoeun0723/hoeunw.github.io/issues"
+    "url": "https://github.com/hoeun0723/hoeun0723.github.io/issues"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",

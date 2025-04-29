@@ -7,7 +7,7 @@ require('dotenv').config({
     siteName: `Hoeun.blog`,
     author: 'Hoeun(WangHoeun)',
     description: `안녕하세요. 프론트엔드 개발자 왕호은입니다. 꾸준한 성장을 좋아합니다.`,
-    siteUrl: 'https://hoeunw.github.io',
+    siteUrl: 'https://hoeun0723.github.io',
     profileImage: `profile-image.png`,
     mainOgImage: 'main-og-image.png',
     keywords: ['개발블로그', '포트폴리오', 'gatsby'],
@@ -26,7 +26,7 @@ require('dotenv').config({
     },
     utterances: {
       src: 'https://utteranc.es/client.js',
-      repo: 'hoeun0723/hoeunw.github.io',
+      repo: 'hoeun0723/hoeun0723.github.io',
       issueTerm: 'pathname',
       theme: 'github-light',
       label: '💬 comments',
@@ -35,7 +35,7 @@ require('dotenv').config({
     },
     giscus: {
       src: 'https://giscus.app/client.js',
-      data_repo: 'hoeun0723/hoeunw.github.io',
+      data_repo: 'hoeun0723/hoeun0723.github.io',
       data_repo_id: 'R_kgDOH5iCbA',
       data_category: 'General',
       data_category_id: 'DIC_kwDOH5iCbM4CUKFl',
