@@ -1,8 +1,11 @@
 import { Global, css } from '@emotion/react'
+
+import fonts from '@/fonts'
  
  const styles = css`
+ ${fonts}
    * {
-     font-family: 'Noto Sans';
+     font-family: 'AppleSDGothicNeo','Noto Sans';
      box-sizing: border-box;
      margin: 0;
      padding: 0;

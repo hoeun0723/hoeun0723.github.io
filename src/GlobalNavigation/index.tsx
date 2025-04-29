@@ -6,7 +6,6 @@ import * as S from './GlobalNavigation.style'
 const ROUTE_LINKS = [
     {label: 'Home', url: '/'},
     {label: 'About', url: '/about'},
-    {label: 'Posts', url: '/posts'},
 ]
 
 const GlobalNavigation = () => {
