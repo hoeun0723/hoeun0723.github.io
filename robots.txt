@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://hoeunw.github.io/sitemap.xml
-Host: https://hoeunw.github.io
+Sitemap: https://hoeun0723.github.io/sitemap.xml
+Host: https://hoeun0723.github.io
