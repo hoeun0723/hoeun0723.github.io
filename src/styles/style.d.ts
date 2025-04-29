@@ -1,5 +1,5 @@
 import '@emotion/react'
-import {Colors, Color, FONTS, Typography} from './theme'
+import {COLORS, Color, FONTS, Typography} from './theme'
 
 declare module '@emotion/react' {
     export interface Theme {

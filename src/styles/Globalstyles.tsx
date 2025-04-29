@@ -5,7 +5,7 @@ import fonts from '@/fonts'
  const styles = css`
  ${fonts}
    * {
-     font-family: 'AppleSDGothicNeo','Noto Sans';
+     font-family: 'AppleSDGothicNeo','Noto Sans', 'sans-serif';
      box-sizing: border-box;
      margin: 0;
      padding: 0;
