@@ -1,9 +1,15 @@
-import GlobalNavigation from "./index";
+import GlobalNavigation from './index'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-    title: 'CATEGORY/GlobalNavigation',
-    component: GlobalNavigation,
-    args: {},
+const meta: Meta<typeof GlobalNavigation> = {
+  title: 'CATEGORY/GlobalNavigation',
+  component: GlobalNavigation,
+  tags: ['autodocs'],
 }
+export default meta
 
-export const Default = {}
+type Story = StoryObj<typeof GlobalNavigation>
+
+export const Default: Story = {
+  args: {},
+}
