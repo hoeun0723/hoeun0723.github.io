@@ -43,7 +43,7 @@ const CategoryList = ({selectedCategory, categoryList}:CategoryListProps)=>{
     return(
         <CategoryListWrapper>
             {Object.entries(categoryList).map(([name,count])=>(
-                <CategoryItem to={`/?category=${name}`} active={name === selectedCategory} key={name}>
+                <CategoryItem to={`/#category=${name}`} active={name === selectedCategory} key={name}>
                     #{name}({count})
                 </CategoryItem>
             ))}
