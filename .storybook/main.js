@@ -1,5 +1,4 @@
 const path = require('path');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -26,16 +25,13 @@ module.exports = {
         loader: require.resolve('babel-loader'),
         options: {
           presets: [require.resolve('babel-preset-gatsby'),'@babel/preset-typescript'],
-          plugins: [require.resolve('babel-plugin-remove-graphql-queries')],
+          plugins: [],
         },
       },
     });
 
     config.resolve.alias['@'] = path.resolve(__dirname, '../src/');
     config.resolve.mainFields = ['browser', 'module', 'main'];
-
-    config.resolve.plugins = config.resolve.plugins || [];
-    config.resolve.plugins.push(new TsconfigPathsPlugin());
 
     return config;
   },
