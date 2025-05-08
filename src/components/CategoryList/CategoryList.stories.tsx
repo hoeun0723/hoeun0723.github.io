@@ -6,7 +6,7 @@ const meta: Meta<typeof CategoryList> = {
   component: CategoryList,
   args: {
     selectedCategory: 'All',
-    categoryList: { All: 0 },
+    categoryList: { All: 0, BACK: 2, JS: 2, Optimization: 3 },
   },
 }
 export default meta
