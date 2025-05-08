@@ -64,6 +64,11 @@ const typography = {
       line-height: 32px;
       font-weight: ${FONTS.WEIGHT.BOLD};
     `,
+    linkBase: css`
+      font-size: ${FONTS.SIZE.BASE};
+      line-height: 30px;
+      font-weight: ${FONTS.WEIGHT.BOLD};
+    `,
     linkSmall: css`
       font-size: ${FONTS.SIZE.SMALL};
       line-height: 28px;
@@ -83,6 +88,11 @@ const typography = {
     textMedium: css`
       font-size: ${FONTS.SIZE.MEDIUM};
       line-height: 32px;
+      font-weight: ${FONTS.WEIGHT.REGULAR};
+    `,
+    textBase: css`
+      font-size: ${FONTS.SIZE.BASE};
+      line-height: 30px;
       font-weight: ${FONTS.WEIGHT.REGULAR};
     `,
     textSmall: css`
