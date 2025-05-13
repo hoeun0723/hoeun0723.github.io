@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const customUtteranceAttribute = {
     src: 'https://utteranc.es/client.js',
@@ -13,7 +13,7 @@ const customUtteranceAttribute = {
 const Comment = () => {
     const element = useRef<HTMLDivElement>(null)
 
-    useLayoutEffect(()=>{
+    useEffect(()=>{
         if (element.current === null) return
         const utterances: HTMLScriptElement = document.createElement('script')
         const attributes = customUtteranceAttribute
@@ -22,7 +22,7 @@ const Comment = () => {
             utterances.setAttribute(key, value)
         })
 
-        element.current?.appendChild(utterances)
+        element.current.appendChild(utterances)
     },[])
 
     return <div ref={element}/>
