@@ -24,7 +24,15 @@ const FONTS = {
 
 const COLORS = {
     GREYSCALE: {
-        '000': '#F5F5F5',
+        '050': '#FAFAFA',
+        '100': '#F5F5F5',
+        '200': '#EEEEEE',
+        '300': '#E0E0E0',
+        '400': '#BDBDBD',
+        '500': '#9E9E9E',
+        '600': '#757575',
+        '700': '#616161',
+        '800': '#424242',
         '900': '#212121',
     },
     BLACK: '#000',
@@ -56,6 +64,11 @@ const typography = {
       line-height: 32px;
       font-weight: ${FONTS.WEIGHT.BOLD};
     `,
+    linkBase: css`
+      font-size: ${FONTS.SIZE.BASE};
+      line-height: 30px;
+      font-weight: ${FONTS.WEIGHT.BOLD};
+    `,
     linkSmall: css`
       font-size: ${FONTS.SIZE.SMALL};
       line-height: 28px;
@@ -77,6 +90,11 @@ const typography = {
       line-height: 32px;
       font-weight: ${FONTS.WEIGHT.REGULAR};
     `,
+    textBase: css`
+      font-size: ${FONTS.SIZE.BASE};
+      line-height: 30px;
+      font-weight: ${FONTS.WEIGHT.REGULAR};
+    `,
     textSmall: css`
       font-size: ${FONTS.SIZE.SMALL};
       line-height: 28px;
@@ -89,7 +107,7 @@ const typography = {
     `,
   }
   
-const theme = { color, FONTS, typography }
+const theme = { FONTS, typography, COLORS, color }
 
 export default theme
 
