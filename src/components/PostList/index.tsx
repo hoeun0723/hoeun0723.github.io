@@ -1,4 +1,3 @@
-import { IGatsbyImageData } from 'gatsby-plugin-image'
 import {useMemo} from 'react'
 
 import PostItem from '@/components/PostList/PostItem'
@@ -14,11 +13,6 @@ export interface PostType {
             summary: string
             date: string
             categories: string[]
-            thumbnail: {
-                childImageSharp: {
-                    gatsbyImageData: IGatsbyImageData
-                }
-            }
         }
     }
 }

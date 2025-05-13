@@ -9,15 +9,10 @@ const PostItem= ({
     date,
     categories,
     summary,
-    thumbnail: {
-        childImageSharp: {gatsbyImageData},
-    },
     link,
 }:PostItemProps) =>{
     return(
         <S.PostItemWrapper to={link}>
-            <S.ThumbnailImage image={gatsbyImageData} alt="Post Item Image"/>
-
             <S.PostItemContent>
                 <S.Title>{title}</S.Title>
                 <S.Date>{date}</S.Date>
