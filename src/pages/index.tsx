@@ -47,7 +47,7 @@ const IndexPage = ({
    const categoryList = useMemo(
     ()=> edges.reduce(
       (
-        list: CategoryListProps['categoryList'],
+        categoryList: CategoryListProps['categoryList'],
         {
           node: {
             frontmatter:{categories},
@@ -55,13 +55,13 @@ const IndexPage = ({
         }: PostType,
       ) =>{
         categories.forEach(category=>{
-          if(list[category] === undefined) list[category]=1
-          else list[category]++
+          if(categoryList[category] === undefined) categoryList[category]=1
+          else categoryList[category]++
         })
 
-        list['All']++
+        categoryList['All']++
 
-        return list
+        return categoryList
       },
       {All: 0},
     ),
