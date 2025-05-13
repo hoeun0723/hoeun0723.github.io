@@ -2,12 +2,12 @@ import { useEffect, useRef } from "react";
 
 const customUtteranceAttribute = {
     src: 'https://utteranc.es/client.js',
-    repo: 'hoeun0723/devlog.github.io',
+    repo: 'hoeun0723/hoeun0723.github.io',
     'issue-term': 'pathname',
     theme: 'github-light',
     label:'💬 comments',
-    crossorigin: 'annoymous',
-    async: 'true',
+    crossorigin: 'anonymous',
+    async: true,
 }
 
 const Comment = () => {
