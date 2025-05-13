@@ -7,7 +7,7 @@ const customUtteranceAttribute = {
     theme: 'github-light',
     label:'💬 comments',
     crossorigin: 'anonymous',
-    async: true,
+    async: 'true',
 }
 
 const Comment = () => {
