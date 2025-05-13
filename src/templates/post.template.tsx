@@ -1,6 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 
+import Comment from '@/components/Comment'
 import PostContent from '@/components/PostDetail/PostContent'
 import PostHeader from '@/components/PostDetail/PostHeader'
 import Layout from '@/Layout'
@@ -45,6 +46,7 @@ const PostTemplate = ({
         <Layout>
             <PostHeader title={title} date={date} categories={categories} thumbnail={gatsbyImageData}/>
             <PostContent html={html}/>
+            <Comment/>
         </Layout>
     )
 }
