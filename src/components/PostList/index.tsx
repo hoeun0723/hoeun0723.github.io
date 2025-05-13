@@ -17,7 +17,7 @@ export interface PostType {
     }
 }
 
-interface PostListProps {
+export interface PostListProps {
     selectedCategory : string
     posts: PostListItemType[]
 }
