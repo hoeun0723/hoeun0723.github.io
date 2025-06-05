@@ -2,9 +2,8 @@ import Comment from '@/components/Comment'
 import Layout from '@/Layout'
 import { PostPageItemType } from '@/types/PostItem.types'
 
-import PostContent from '@/components/PostDetail/PostContent'
-import PostHeader from '@/components/PostDetail/PostHeader'
-import TableOfContent from '@/components/PostDetail/TableOfContent'
+import PostBody from './PostBody'
+import PostHeader from './PostHeader'
 
 interface PostPageInfoProps {
     postPageInfo: PostPageItemType
@@ -30,8 +29,7 @@ const PostDetail = ({postPageInfo}:PostPageInfoProps)=> {
     return (
         <Layout>
             <PostHeader title={title} date={date} categories={categories} thumbnail={gatsbyImageData}/>
-            <TableOfContent tableOfContents={tableOfContents}/>
-            <PostContent html={html}/>
+            <PostBody tableOfContents={tableOfContents} html={html}/>
             <Comment/>
         </Layout>
     )
