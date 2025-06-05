@@ -9,3 +9,12 @@
 
 ### 기술 스택
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white"> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"> <img src="https://img.shields.io/badge/Gatsby-663399?style=for-the-badge&logo=Gatsby&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/Emotion-C865B9?style=flat&logo=emotion&logoColor=white"/>
+
+## 남은 개발 목록
+- [x] : TOC
+- [ ] : SEO 설정
+- [ ] : 다크모드 구현
+- [ ] : 헤더 글 및 푸터 작성하기
+- [ ] : 리드미 작성
+- [ ] : 검색 기능
+- [ ] : 카테고리 및 시리즈 기능

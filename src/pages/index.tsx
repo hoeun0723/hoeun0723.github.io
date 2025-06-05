@@ -5,11 +5,11 @@ import { useMemo } from "react";
 
 import MainHeader from "@/components/MainHeader"
 import { CategoryListProps } from "@/components/MainHeader/CategoryList";
-import PostList, {PostType} from '@/components/PostList'
+import PostList from '@/components/PostList'
 import Layout from '@/Layout'
-import { PostListItemType } from "@/types/PostItem.types"
+import { PostListItemType,PostType } from "@/types/PostItem.types"
 
-type IndexPageProps = {
+interface IndexPageProps {
   location: {
     search: string
     hash: string
