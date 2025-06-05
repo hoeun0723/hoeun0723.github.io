@@ -1,14 +1,15 @@
 import styled from '@emotion/styled'
-import {GatsbyImage, IGatsbyImageData} from 'gatsby-plugin-image'
+import {GatsbyImage} from 'gatsby-plugin-image'
+import { GatsbyImageDataType } from '@/types/gatsby.type'
 
 import PostHeaderInfo, {PostHeadInfoProps} from './PostHeader.info'
 
 interface PostHeaderProps extends PostHeadInfoProps {
-    thumbnail: IGatsbyImageData
+    thumbnail: GatsbyImageDataType
 }
 
 interface GatsbyImgProps {
-    image: IGatsbyImageData
+    image: GatsbyImageDataType
     alt: string
     className?: string
 }

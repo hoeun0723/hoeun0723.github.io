@@ -4,15 +4,9 @@ import {graphql} from 'gatsby'
 import Comment from '@/components/Comment'
 import PostContent from '@/components/PostDetail/PostContent'
 import PostHeader from '@/components/PostDetail/PostHeader'
+import TableOfContent from '@/components/PostDetail/TableOfContent'
 import Layout from '@/Layout'
-import { PostFrontmatterType } from '@/types/PostItem.types'
-
-export interface PostPageItemType {
-    node: {
-        html: string
-        frontmatter: PostFrontmatterType
-    }
-}
+import { PostPageItemType } from '@/types/PostItem.types'
 
 interface PostTemplateProps {
     data: {
@@ -29,6 +23,7 @@ const PostTemplate = ({
 }:PostTemplateProps)=> {
     const {
         node: {
+            tableOfContents,
             html,
             frontmatter: {
                 title,
@@ -45,6 +40,7 @@ const PostTemplate = ({
     return (
         <Layout>
             <PostHeader title={title} date={date} categories={categories} thumbnail={gatsbyImageData}/>
+            <TableOfContent tableOfContents={tableOfContents}/>
             <PostContent html={html}/>
             <Comment/>
         </Layout>
@@ -58,6 +54,7 @@ export const queryMarkdownDataBySlug = graphql`
         allMarkdownRemark(filter: {fields: {slug: {eq: $slug}}}) {
             edges {
                 node {
+                    tableOfContents
                     html
                     frontmatter {
                         title
