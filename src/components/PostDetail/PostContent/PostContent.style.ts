@@ -29,6 +29,17 @@ display: flex;
   * + h3 {
     margin-top: 32px;
   }
+
+   // TOC 클릭시 헤더가 보이게끔 이동하기 위한 속성
+  h1[id],
+  h2[id],
+  h3[id],
+  h4[id],
+  h5[id],
+  h6[id] {
+    scroll-margin-top: 6rem; // 각 태그의 높이 만큼
+  }
+
   hr + h1,
   hr + h2,
   hr + h3 {
