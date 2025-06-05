@@ -10,11 +10,11 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
     "postinstall": "husky install",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "lint": "eslint --cache .",
+    "build": "gatsby build",
+    "dev": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
@@ -102,5 +102,10 @@
     "src/**": [
       "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\""
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
