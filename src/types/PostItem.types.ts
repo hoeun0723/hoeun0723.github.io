@@ -1,4 +1,4 @@
-import { IGatsbyImageData } from "gatsby-plugin-image"
+import { GatsbyImageDataType } from "./gatsby.type"
 
 export type PostFrontmatterType = {
     title: string
@@ -7,17 +7,33 @@ export type PostFrontmatterType = {
     summary: string
      thumbnail: {
     childImageSharp: {
-      gatsbyImageData: IGatsbyImageData
+      gatsbyImageData: GatsbyImageDataType
     }
   }
 }
 
-export type PostListItemType = {
+export interface PostListItemType {
     node:{
+      tableOfContent: string
         id: string
         fields: {
             slug: string
         }
         frontmatter: PostFrontmatterType
     }
+}
+
+export interface PostType {
+  node: {
+    id: string
+    frontmatter: PostFrontmatterType
+  }
+}
+
+export interface PostPageItemType {
+  node: {
+    tableOfContents: string
+    html: string
+    frontmatter: PostFrontmatterType
+  }
 }
