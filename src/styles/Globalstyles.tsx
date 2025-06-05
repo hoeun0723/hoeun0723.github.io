@@ -1,9 +1,12 @@
 import { Global, css } from '@emotion/react'
 
+import Normalize from './Normalize'
+
 import fonts from '@/fonts'
  
  const styles = css`
  ${fonts}
+ ${Normalize}
    * {
      font-family: 'AppleSDGothicNeo','Noto Sans', 'sans-serif';
      box-sizing: border-box;
@@ -25,6 +28,7 @@ import fonts from '@/fonts'
    body,
    #___gatsby {
      height: 100%;
+     scroll-behavior: smooth;
    }
  
    a,

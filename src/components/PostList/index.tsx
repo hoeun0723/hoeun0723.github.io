@@ -5,18 +5,6 @@ import {PostListItemType} from '@/types/PostItem.types'
 
 import * as S from './PostList.style'
 
-export interface PostType {
-    node: {
-        id: string
-        frontmatter: {
-            title: string
-            summary: string
-            date: string
-            categories: string[]
-        }
-    }
-}
-
 export interface PostListProps {
     selectedCategory : string
     posts: PostListItemType[]
