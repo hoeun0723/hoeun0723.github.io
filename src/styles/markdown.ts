@@ -6,7 +6,6 @@ const MarkdownStyle = css`
   flex-direction: column;
   width: 768px;
   margin: 0 auto;
-  padding-top: 80px;
   max-width: 680px;
   word-break: break-all;
   // Markdown Style
