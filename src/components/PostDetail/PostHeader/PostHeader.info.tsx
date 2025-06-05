@@ -18,7 +18,7 @@ const PostHeaderInfo = ({title, date, categories}: PostHeadInfoProps) => {
             </PrevPageIcon>
             <Title>{title}</Title>
             <PostData>
-                <div>{categories.join(' / ')}</div>
+                <div>{categories.map(v=>v.toUpperCase()).join(' / ')}</div>
                 <div>{date}</div>
             </PostData>
         </PostHeadInfoWrapper>
