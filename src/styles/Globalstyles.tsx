@@ -28,6 +28,7 @@ import fonts from '@/fonts'
    body,
    #___gatsby {
      height: 100%;
+     scroll-behavior: smooth;
    }
  
    a,
