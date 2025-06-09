@@ -4,7 +4,7 @@ import queryString, {ParsedQuery} from 'query-string'
 import { useMemo } from "react";
 
 import CategoryHeader from "@/components/CategoryHeader"
-import { CategoryListProps } from "@/components/CategoryList";
+import { CategoryListProps } from "@/components/CategoryHeader/CategoryList";
 import PostList from '@/components/PostList'
 import Layout from '@/Layout'
 import { PostListItemType,PostType } from "@/types/PostItem.types"
