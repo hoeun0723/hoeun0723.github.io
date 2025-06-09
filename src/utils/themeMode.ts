@@ -1,16 +1,17 @@
+import {isBrowser} from '@/utils'
 import browserStorage from "./browserStorage";
 
 type ThemeMode = 'dark' | 'light'
 
 export interface ThemeModeType {
-    $body: HTMLElement
+    $body: HTMLElement | undefined
     isDarkMode: boolean
     themeMode: ThemeMode
     themeToggler: () => void
 }
 
 // prefers-color-scheme 값을 확인 해 시스템의 컬러모드 초기값으로 사용
-const prefersColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+const prefersColorScheme = isBrowser && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 //이전에 방문했다면 localstorage에 theme 값이 저장되어 있을 예정
 const localTheme = browserStorage.get('theme') as ThemeMode
 
@@ -20,16 +21,20 @@ const localTheme = browserStorage.get('theme') as ThemeMode
 const initialTheme = localTheme || prefersColorScheme
 
 class ThemeModeHandler implements ThemeModeType {
-    $body = document.querySelector('body') as HTMLElement
-    isDarkMode
-    themeMode
+    $body: HTMLElement | undefined
+    isDarkMode : boolean
+    themeMode : ThemeMode
     constructor() {
-        this.$body.classList.add(initialTheme)
+        this.$body = isBrowser? (document.querySelector('body')as HTMLElement):undefined
         this.isDarkMode = initialTheme === 'dark'
         this.themeMode = initialTheme
+        this.setInitMode()
+    }
+    setInitMode() {
+        this.$body?.classList.add(initialTheme)
     }
     themeToggler() {
-        this.isDarkMode = this.$body.classList.contains('dark')
+        this.isDarkMode = isBrowser && this.$body!.classList.contains('dark')
         if(this.isDarkMode) {
             this.setLightMode()
         } else {
@@ -37,15 +42,15 @@ class ThemeModeHandler implements ThemeModeType {
         }
     }
     setDarkMode() {
-        this.$body.classList.remove('light')
-        this.$body.classList.add('dark')
+        this.$body?.classList.remove('light')
+        this.$body?.classList.add('dark')
         browserStorage.set('theme','dark')
         this.isDarkMode = true
         this.themeMode = 'dark'
     }
     setLightMode() {
-        this.$body.classList.remove('dark')
-        this.$body.classList.add('light')
+        this.$body?.classList.remove('dark')
+        this.$body?.classList.add('light')
         browserStorage.set('theme','light')
         this.isDarkMode = false
         this.themeMode = 'light'
