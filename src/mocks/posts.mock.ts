@@ -1,6 +1,7 @@
 export const posts = [
   {
     node: {
+      tableOfContents: '',
       id: 'cd1635e2-ac17-5ae2-9110-5536b7a244a1',
       fields: {
         slug: '/react/test-react/',
@@ -17,6 +18,7 @@ export const posts = [
   },
   {
     node: {
+      tableOfContents: '',
       id: '2d5e048f-12c6-58c8-85f6-0c5578d06023',
       fields: {
         slug: '/test/',
@@ -32,6 +34,7 @@ export const posts = [
   },
   {
     node: {
+      tableOfContents: '',
       id: 'c165a0ec-34c0-5b78-b7a3-08d6f4afeb42',
       fields: {
         slug: '/testable/',

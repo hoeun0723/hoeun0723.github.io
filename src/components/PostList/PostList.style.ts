@@ -25,6 +25,8 @@ export const PostItemWrapper = styled(Link)`
     transition: 0.3s box-shadow;
     cursor: pointer;
 
+    background-color: var(--color-background-secondary);
+
     &:hover {
         box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
@@ -63,12 +65,12 @@ export const Category = styled.div`
 
 export const CategoryItem = styled.div`
     margin: 2.5px 5px;
-    padding: 3px 5px;
-    border-radius: 3px;
-    background-color: ${({theme:{COLORS}})=>COLORS.GREYSCALE[900]};
-    ${({theme:{typography}})=>typography.linkSmall}
+    padding: 6px 12px;
+    border-radius: 8px;
+    ${({theme:{typography}})=>typography.textSmall}
     line-height: 18px;
-    color: ${({theme: {COLORS}})=> COLORS.WHITE};
+    background-color: var(--color-category-chip);
+    color: var(--color-text);
 `
 
 export const Summary = styled.p`
@@ -81,6 +83,6 @@ export const Summary = styled.p`
     text-overflow: ellipsis;
     white-space: normal;
 
-    ${({theme: {typography}})=> typography.textSmall}
-    color: ${({theme: {COLORS}})=> COLORS.GREYSCALE[800]};
+    color: var(--color-paragraph);
+    ${({theme:{typography}})=> typography.textSmall};
 `

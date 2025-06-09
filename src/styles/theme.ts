@@ -41,10 +41,13 @@ const COLORS = {
     WHITE: '#FFF',
 }
 
-const color = {}
-
 const typography = {
     // Display
+    displayBoldLarge: css`
+      font-size: ${FONTS.SIZE.X_LARGE};
+      line-height: 64px;
+      font-weight: ${FONTS.WEIGHT.BOLD};
+    `,
     displayBold: css`
       font-size: ${FONTS.SIZE.X_LARGE};
       line-height: 48px;
@@ -109,12 +112,11 @@ const typography = {
     `,
   }
   
-const theme = { FONTS, typography, COLORS, color, MarkdownStyle }
+const theme = { FONTS, typography, COLORS, MarkdownStyle }
 
 export default theme
 
 export type COLORS = typeof COLORS
-export type Color = typeof color
 export type FONTS = typeof FONTS
 export type Typography = typeof typography
 export type MarkdownStyleType = typeof MarkdownStyle
