@@ -3,8 +3,8 @@ import { IGatsbyImageData } from "gatsby-plugin-image"
 import queryString, {ParsedQuery} from 'query-string'
 import { useMemo } from "react";
 
-import MainHeader from "@/components/MainHeader"
-import { CategoryListProps } from "@/components/MainHeader/CategoryList";
+import CategoryHeader from "@/components/CategoryHeader"
+import { CategoryListProps } from "@/components/CategoryHeader/CategoryList";
 import PostList from '@/components/PostList'
 import Layout from '@/Layout'
 import { PostListItemType,PostType } from "@/types/PostItem.types"
@@ -70,7 +70,7 @@ const IndexPage = ({
    )
    return (
     <Layout>
-      <MainHeader selectedCategory={selectedCategory} categoryList={categoryList}/>
+      <CategoryHeader selectedCategory={selectedCategory} categoryList={categoryList}/>
       <PostList selectedCategory={selectedCategory} posts={edges} />
     </Layout>
    )
