@@ -28,7 +28,7 @@ const PostList = ({selectedCategory, posts}:PostListProps)=> {
 
     return(
         <S.Container>
-            {postListData.map(({node:{id, fields: {slug}, frontmatter,}}:PostListItemType)=>(
+            {postListData.map(({node:{id, fields: {slug}, frontmatter,}}:PostListItemOmitThumbnail)=>(
                 <PostItem {...frontmatter} link={slug} key={id}/>
             ))}
         </S.Container>
