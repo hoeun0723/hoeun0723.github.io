@@ -37,7 +37,7 @@ const useUtterance = () => {
 
     useEffect(() => {
         if(utteranceElement.current === null) return
-        const utteranceIframe = document.querySelector('iframe')
+        const utteranceIframe = document.querySelector('iframe.utterance-frame') as HTMLIFrameElement
         utteranceIframe ? setThemeUtterance(utteranceIframe) : createUtterance()
     },[isDarkMode])
 
