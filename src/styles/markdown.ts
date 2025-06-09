@@ -101,7 +101,55 @@ const MarkdownStyle = css`
   pre[class*='language-']{
     tab-size: 2;
   }
-  
+
+  table {
+    padding: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  table tr {
+    border-top: 1px solid #d0d7de;
+    background-color: #ffffff; // dark: #0d1117
+    margin: 0;
+    padding: 0;
+  }
+  table tr:nth-child(2n) {
+    background-color: #f6f8fa; // dark: #161b22
+  }
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+  table tr th {
+    display: table-cell;
+    font-weight: bold;
+    border: 1px solid #d0d7de;
+    text-align: center;
+    margin: 0;
+    padding: 6px 13px;
+    vertical-align: inherit;
+  }
+  table tr td {
+    border: 1px solid #d0d7de;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+  }
+  table tr th :first-child,
+  table tr td :first-child {
+    margin-top: 0;
+  }
+  table tr th :last-child,
+  table tr td :last-child {
+    margin-bottom: 0;
+  }
+
   // Markdown Responsive Design
   @media (max-width: 768px) {
     width: 100%;
