@@ -1,7 +1,6 @@
 import { css } from '@emotion/react'
-
 const MarkdownStyle = css`
-    // Renderer Style
+  // Renderer Style
   display: flex;
   flex-direction: column;
   width: 768px;
@@ -88,8 +87,8 @@ const MarkdownStyle = css`
       border-radius: 3px;
     }
   }
-  code[class*='language-'],
-  pre[class*='language-'] {
+  code[class*='language-text'],
+  pre[class*='language-text'] {
     padding: 1.6px 4.8px;
     font-size: 14.4px;
     background-color: rgb(215 218 221); // dark: rgb(73, 80, 87)
@@ -97,6 +96,12 @@ const MarkdownStyle = css`
     color: rgb(33, 37, 41); //dark: rgb(248, 249, 250);
     font-size: 14.4px;
   }
+
+  code[class*='language-'],
+  pre[class*='language-']{
+    tab-size: 2;
+  }
+  
   // Markdown Responsive Design
   @media (max-width: 768px) {
     width: 100%;
