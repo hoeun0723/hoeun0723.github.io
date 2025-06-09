@@ -10,7 +10,7 @@ export const Container = styled.div`
     border-radius: 12px;
 `
 
-export const MainInfo = styled.div`
+export const CategoryInfo = styled.div`
     margin-bottom: 12px;
 `
 
