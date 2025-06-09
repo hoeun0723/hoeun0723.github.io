@@ -2,7 +2,7 @@ import browserStorage from "./browserStorage";
 
 type ThemeMode = 'dark' | 'light'
 
-interface ThemeModeType {
+export interface ThemeModeType {
     $body: HTMLElement
     isDarkMode: boolean
     themeMode: ThemeMode
