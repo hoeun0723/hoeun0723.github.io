@@ -1,4 +1,4 @@
-import * as S from '../CategoryHeader.style';
+import * as S from './CategoryList.style';
 
 export interface CategoryListProps {
     selectedCategory: string
