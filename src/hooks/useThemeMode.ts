@@ -7,13 +7,13 @@ export type ThemeModeStateType = Pick<ThemeModeType, 'isDarkMode' | 'themeMode'>
 export type ThemeModeActionType = Pick<ThemeModeType, 'themeToggler'>
 
 export const themeInitMode = {
-    isDarkNode: themeModeHandler.isDarkMode,
+    isDarkMode: themeModeHandler.isDarkMode,
     themeMode: themeModeHandler.themeMode,
 }
 
 const useThemeMode = () => {
     const [themeMode, setThemeMode] = useState(themeInitMode.themeMode)
-    const [isDarkMode, setIsDarkMode] = useState(themeInitMode.isDarkNode)
+    const [isDarkMode, setIsDarkMode] = useState(themeInitMode.isDarkMode)
 
     const themeToggler = () => {
         themeModeHandler.themeToggler()
