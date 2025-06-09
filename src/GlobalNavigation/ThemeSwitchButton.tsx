@@ -1,20 +1,16 @@
-import { useState } from 'react'
 import { FaRegMoon } from 'react-icons/fa'
 import { FiSun } from 'react-icons/fi'
 
-import themeModeHandler from '@/utils/themeMode'
+import { useThemeModeProviderState,useThemeModeProviderAction } from '@/context/ThemeMode.Provider'
 
 import * as S from './GlobalNavigation.style'
 
 const ThemeSwitchButton = () => {
-  const [isDarkMode, setIsDarkMode] = useState(themeModeHandler.isDarkMode)
+    const {isDarkMode} = useThemeModeProviderState()
+    const {themeToggler} = useThemeModeProviderAction()
 
-  const handleClickThemeToggler = () => {
-    themeModeHandler.themeToggler()
-    setIsDarkMode(themeModeHandler.isDarkMode)
-  }
   return (
-    <S.ThemeSwitchButton onClick={handleClickThemeToggler}>
+    <S.ThemeSwitchButton onClick={themeToggler}>
       {isDarkMode ? <FaRegMoon /> : <FiSun />}
     </S.ThemeSwitchButton>
   )
