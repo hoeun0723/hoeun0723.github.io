@@ -52,7 +52,7 @@ export const TableOfContent = styled.aside`
       width: 100%;
       /* padding: 0.4rem; */
       &:hover {
-        color: tomato;
+        color: var(--color-primary);
       }
     }
   }
