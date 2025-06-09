@@ -91,6 +91,15 @@ jobs:
           path: README.md
 
 
+      - name: Create dummy file to preload upload-artifact
+        run: echo "dummy file" > dummy.txt
+      - name: Upload dummy artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: preload-action
+          path: dummy.txt
+
+
   # Deployment job
   deploy:
     environment:
@@ -101,4 +110,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
