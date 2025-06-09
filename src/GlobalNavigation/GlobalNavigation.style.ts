@@ -34,8 +34,18 @@ border-radius: 50%;
 export const NavLinks = styled.nav`
     > ul {
         display: flex;
+        align-items: center;
         gap: 12px;
     }
 `
 
 export const NavLink = styled(Link)``
+
+export const ThemeSwitchButton = styled.button`
+  width: 24px;
+  height: 24px;
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
+`

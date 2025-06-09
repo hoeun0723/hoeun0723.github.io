@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import ThemeSwitchButton from '@/components/ThemeSwitchButton'
+import ThemeSwitchButton from './ThemeSwitchButton'
 
 import BlogTitle from "./BlogTitle";
 import * as S from './GlobalNavigation.style'
