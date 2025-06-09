@@ -1,4 +1,4 @@
-import useUtterance from '@/hooks/useUtterance'
+import useUtterance from "@/hooks/useUtterance"
 
 const Comment = () => {
     const {utteranceElement} = useUtterance()

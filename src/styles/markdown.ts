@@ -119,10 +119,11 @@ const MarkdownStyle = css`
     color: var(--color-text);
     margin: 0;
     padding: 0;
+    &:nth-of-type(2n) {
+      background-color: var(--color-table-background-color-second);
+    }
   }
-  table tr:nth-child(2n) {
-    background-color: var(--color-table-background-color-second);
-  }
+  
   thead {
     display: table-header-group;
     vertical-align: middle;
