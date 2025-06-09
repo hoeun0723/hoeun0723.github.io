@@ -1,13 +1,13 @@
 import {useMemo} from 'react'
 
 import PostItem from '@/components/PostList/PostItem'
-import {PostListItemTypeOmitThumbnail} from '@/types/PostItem.types'
+import {PostListItemOmitThumbnail} from '@/types/PostItem.types'
 
 import * as S from './PostList.style'
 
 export interface PostListProps {
     selectedCategory : string
-    posts: PostListItemTypeOmitThumbnail[]
+    posts: PostListItemOmitThumbnail[]
 }
 
 
@@ -21,7 +21,7 @@ const PostList = ({selectedCategory, posts}:PostListProps)=> {
                     node: {
                         frontmatter: {categories},
                     },
-                }:PostListItemTypeOmitThumbnail)=>(selectedCategory!=='All'?categories.includes(selectedCategory):true),
+                }:PostListItemOmitThumbnail)=>(selectedCategory!=='All'?categories.includes(selectedCategory):true),
             ),
             [selectedCategory],
     )
