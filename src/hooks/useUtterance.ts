@@ -1,17 +1,8 @@
 import {useEffect, useRef} from 'react'
 
+import BLOG_CONFIG from '@/constant/blog.config'
 import { useThemeModeProviderState } from '@/context/ThemeMode.Provider'
 
-
-const customUtteranceAttribute = {
-    src: 'https://utteranc.es/client.js',
-    repo: 'hoeun0723/hoeun0723.github.io',
-    'issue-term': 'pathname',
-    theme: 'github-light',
-    label:'💬 comments',
-    crossorigin: 'anonymous',
-    async: 'true',
-}
 const useUtterance = () => {
     const {isDarkMode} = useThemeModeProviderState()
     const utteranceTheme = isDarkMode ? 'github-dark' : 'github-light'
@@ -19,7 +10,7 @@ const useUtterance = () => {
 
     const createUtterance = () => {
         const utterances: HTMLScriptElement = document.createElement('script')
-        const attributes = { ... customUtteranceAttribute, theme: utteranceTheme }
+        const attributes = { ... BLOG_CONFIG.utterances, theme: utteranceTheme }
 
         Object.entries(attributes).forEach(([key,value])=> {
             utterances.setAttribute(key, value)
