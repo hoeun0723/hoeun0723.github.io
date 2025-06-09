@@ -45,6 +45,11 @@ const color = {}
 
 const typography = {
     // Display
+    displayBoldLarge: css`
+      font-size: ${FONTS.SIZE.X_LARGE};
+      line-height: 64px;
+      font-weight: ${FONTS.WEIGHT.BOLD};
+    `,
     displayBold: css`
       font-size: ${FONTS.SIZE.X_LARGE};
       line-height: 48px;
