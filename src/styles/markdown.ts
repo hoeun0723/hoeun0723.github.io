@@ -11,6 +11,8 @@ const MarkdownStyle = css`
   line-height: 1.8;
   font-size: 16px;
   font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-background);
   // Apply Padding Attribute to All Elements
   p {
     padding: 3px 0;
@@ -21,6 +23,10 @@ const MarkdownStyle = css`
   h3 {
     font-weight: 800;
     margin-bottom: 32px;
+  }
+  strong {
+    font-size: 18px;
+    font-weight: 600;
   }
   // TOC 클릭시 헤더가 보이게끔 이동하기 위한 속성
   h1[id],
@@ -54,7 +60,7 @@ const MarkdownStyle = css`
   blockquote {
     margin: 12px 0;
     padding: 5px 15px;
-    border-left: 2px solid #000000;
+    border-left: 2px solid var(--color-text);
     font-weight: 800;
   }
   // Adjust List Element Style
@@ -91,9 +97,9 @@ const MarkdownStyle = css`
   pre[class*='language-text'] {
     padding: 1.6px 4.8px;
     font-size: 14.4px;
-    background-color: rgb(215 218 221); // dark: rgb(73, 80, 87)
+    background-color: var(--color-code-background);
     font-weight: bold;
-    color: rgb(33, 37, 41); //dark: rgb(248, 249, 250);
+    color: var(--color-code-text);
     font-size: 14.4px;
   }
 
@@ -108,13 +114,14 @@ const MarkdownStyle = css`
     border-collapse: collapse;
   }
   table tr {
-    border-top: 1px solid #d0d7de;
-    background-color: #ffffff; // dark: #0d1117
+    border-top: 1px solid var(--color-table-border);
+    background-color: var(--color-table-background-color);
+    color: var(--color-text);
     margin: 0;
     padding: 0;
   }
   table tr:nth-child(2n) {
-    background-color: #f6f8fa; // dark: #161b22
+    background-color: var(--color-table-background-color-second);
   }
   thead {
     display: table-header-group;
@@ -129,14 +136,14 @@ const MarkdownStyle = css`
   table tr th {
     display: table-cell;
     font-weight: bold;
-    border: 1px solid #d0d7de;
+    border: 1px solid var(--color-table-border);
     text-align: center;
     margin: 0;
     padding: 6px 13px;
     vertical-align: inherit;
   }
   table tr td {
-    border: 1px solid #d0d7de;
+    border: 1px solid var(--color-table-border);
     text-align: left;
     margin: 0;
     padding: 6px 13px;
