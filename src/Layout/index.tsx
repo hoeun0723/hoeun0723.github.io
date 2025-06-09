@@ -1,8 +1,11 @@
+import {ReactNode} from 'react'
+
+
 import Footer from '@/components/Footer'
 import GlobalNavigation from '@/GlobalNavigation'
 import Styles from '@/styles'
-import styled from '@emotion/styled'
-import {ReactNode} from 'react'
+
+import * as S from './Layout.style'
 
 
 interface LayoutProps {
@@ -12,20 +15,13 @@ interface LayoutProps {
 const Layout = ({children}: LayoutProps) => {
     return (
         <Styles>
-            <Container>
+            <S.Container>
                 <GlobalNavigation/>
                 <main>{children}</main>
                 <Footer/>
-            </Container>
+            </S.Container>
         </Styles>
     )
 }
 
 export default Layout
-
-
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-`
