@@ -81,14 +81,9 @@ jobs:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./public
-      - name: Upload dummy artifact to preload action
-        uses: actions/upload-artifact@v3
-        with:
-          name: preload-action
-          path: README.md
 
 
       - name: Create dummy file to preload upload-artifact
