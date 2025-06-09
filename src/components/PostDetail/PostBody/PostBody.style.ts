@@ -12,7 +12,7 @@ export const TableOfContent = styled.aside`
     position: absolute;
     height: 100%;
     right: 0px;
-    transform: translateX(-20%);
+    transform: translateX(-16%);
     padding: 1rem;
     font-size: 0.9rem;
   @media (max-width: 1360px) {
