@@ -69,7 +69,7 @@ export const CategoryItem = styled.div`
     border-radius: 8px;
     ${({theme:{typography}})=>typography.textSmall}
     line-height: 18px;
-    background-color: var(--color-background);
+    background-color: var(--color-chip);
     color: var(--color-text);
 `
 
