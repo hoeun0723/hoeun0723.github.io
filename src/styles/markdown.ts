@@ -149,8 +149,8 @@ const MarkdownStyle = css`
     margin: 0;
     padding: 6px 13px;
   }
-  table tr th :first-child,
-  table tr td :first-child {
+  table tr th :first-of-type,
+  table tr td :first-of-type {
     margin-top: 0;
   }
   table tr th :last-child,
