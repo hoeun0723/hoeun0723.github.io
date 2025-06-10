@@ -104,7 +104,7 @@ const MarkdownStyle = css`
   }
 
   code[class*='language-'],
-  pre[class*='language-']{
+  pre[class*='language-'] {
     tab-size: 2;
   }
 
@@ -123,7 +123,7 @@ const MarkdownStyle = css`
       background-color: var(--color-table-background-color-second);
     }
   }
-  
+
   thead {
     display: table-header-group;
     vertical-align: middle;

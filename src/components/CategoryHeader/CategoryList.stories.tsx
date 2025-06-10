@@ -1,5 +1,6 @@
-import CategoryList, { CategoryListProps } from './CategoryList'
 import { Meta, StoryObj } from '@storybook/react' // Storybook 8.x에서 최신 패키지
+
+import CategoryList, { CategoryListProps } from './CategoryList'
 
 const meta: Meta<typeof CategoryList> = {
   title: 'CATEGORY/CategoryList',

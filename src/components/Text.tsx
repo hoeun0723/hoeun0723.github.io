@@ -1,11 +1,11 @@
-import React, {FunctionComponent} from 'react'
+import React, { FunctionComponent } from 'react'
 
 interface TextProps {
-    text: string
+  text: string
 }
 
-const Text: FunctionComponent<TextProps> = function ({text}) {
-    return <div>{text}</div>
+const Text: FunctionComponent<TextProps> = function ({ text }) {
+  return <div>{text}</div>
 }
 
 export default Text

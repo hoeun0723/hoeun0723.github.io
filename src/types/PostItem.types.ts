@@ -1,11 +1,11 @@
-import { GatsbyImageDataType } from "./gatsby.type"
+import { GatsbyImageDataType } from './gatsby.type'
 
 export type PostFrontmatterType = {
-    title: string
-    date: string
-    categories: string[]
-    summary: string
-     thumbnail: {
+  title: string
+  date: string
+  categories: string[]
+  summary: string
+  thumbnail: {
     childImageSharp: {
       gatsbyImageData: GatsbyImageDataType
     }
@@ -13,17 +13,17 @@ export type PostFrontmatterType = {
 }
 
 export interface PostListItemType {
-    node:{
-      tableOfContent: string
-        id: string
-        fields: {
-            slug: string
-        }
-        frontmatter: PostFrontmatterType
+  node: {
+    tableOfContent: string
+    id: string
+    fields: {
+      slug: string
     }
+    frontmatter: PostFrontmatterType
+  }
 }
 
-export type PostFrontmatterTypeOmitThumbnail = Omit <PostFrontmatterType,'thumbnail'>
+export type PostFrontmatterTypeOmitThumbnail = Omit<PostFrontmatterType, 'thumbnail'>
 
 export interface PostListItemOmitThumbnail {
   node: {
@@ -32,7 +32,7 @@ export interface PostListItemOmitThumbnail {
     fields: {
       slug: string
     }
-    frontmatter : PostFrontmatterTypeOmitThumbnail
+    frontmatter: PostFrontmatterTypeOmitThumbnail
   }
 }
 

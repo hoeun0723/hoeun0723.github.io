@@ -1,8 +1,4 @@
 module.exports = {
-    presets: [
-      'babel-preset-gatsby',
-      '@babel/preset-typescript',
-    ],
-    plugins: [],
-  };
-  
+  presets: ['babel-preset-gatsby', '@babel/preset-typescript'],
+  plugins: [],
+}

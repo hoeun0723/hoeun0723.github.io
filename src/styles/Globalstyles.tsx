@@ -1,51 +1,51 @@
 import { Global, css } from '@emotion/react'
 
+import fonts from '@/fonts'
+
 import Normalize from './Normalize'
 
-import fonts from '@/fonts'
- 
- const styles = css`
- ${fonts}
- ${Normalize}
+const styles = css`
+  ${fonts}
+  ${Normalize}
    * {
-     font-family: 'AppleSDGothicNeo','Noto Sans', 'sans-serif';
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
-   }
-   button,
-   input,
-   select,
-   textarea {
-     background-color: transparent;
-     border: 0;
-     &:focus {
-       outline: none;
-       box-shadow: none;
-     }
-   }
-   html,
-   body,
-   #___gatsby {
-     height: 100%;
-     scroll-behavior: smooth;
-   }
- 
-   a,
-   a:hover,
-   button {
-     color: inherit;
-     text-decoration: none;
-     cursor: pointer;
-   }
- 
-   ul,
-   li {
-     padding: 0;
-     list-style: none;
-   }
+    font-family: 'AppleSDGothicNeo', 'Noto Sans', 'sans-serif';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    background-color: transparent;
+    border: 0;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  html,
+  body,
+  #___gatsby {
+    height: 100%;
+    scroll-behavior: smooth;
+  }
 
-     body {
+  a,
+  a:hover,
+  button {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  ul,
+  li {
+    padding: 0;
+    list-style: none;
+  }
+
+  body {
     --color-background: #f3f5f7;
     --color-background-secondary: #ffffff;
     --color-category-chip: #eceef1;
@@ -86,10 +86,10 @@ import fonts from '@/fonts'
     --color-secondary: #1f6feb;
     /* --color-tertiary:  */
   }
- `
- 
- const GlobalStyle = () => {
-   return <Global styles={styles} />
- }
- 
- export default GlobalStyle
+`
+
+const GlobalStyle = () => {
+  return <Global styles={styles} />
+}
+
+export default GlobalStyle

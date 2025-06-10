@@ -1,20 +1,20 @@
 import styled from '@emotion/styled'
 
 export const Container = styled.div`
-    position: relative;
+  position: relative;
 `
 
 export const MarkdownRenderer = styled.article`
-    ${({theme: {MarkdownStyle}})=> MarkdownStyle}
+  ${({ theme: { MarkdownStyle } }) => MarkdownStyle}
 `
 
 export const TableOfContent = styled.aside`
-    position: absolute;
-    height: 100%;
-    right: 0px;
-    transform: translateX(-16%);
-    padding: 1rem;
-    font-size: 0.9rem;
+  position: absolute;
+  height: 100%;
+  right: 0px;
+  transform: translateX(-16%);
+  padding: 1rem;
+  font-size: 0.9rem;
   @media (max-width: 1360px) {
     position: relative;
     transform: translateX(0);
