@@ -1,23 +1,17 @@
 import styled from '@emotion/styled'
-import {Link} from 'gatsby'
-import {ReactNode} from 'react'
+import { Link } from 'gatsby'
+import { ReactNode } from 'react'
 
 export const Container = styled.div`
-    width: 768px;
-    padding: 1rem;
-    margin: 0 auto;
-    color: var(--color-heading-text);
-    background-color: var(--color-background-secondary);
-    box-shadow: rgba(0,0,0,0.08) 0px 0px 15px;
-    border: 2px solid var(--color-table-border);
-    border-radius: 12px;
+  width: 768px;
+  padding: 1rem;
+  margin: 0 auto;
+  color: var(--color-heading-text);
+  background-color: var(--color-background-secondary);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 15px;
+  border: 2px solid var(--color-table-border);
+  border-radius: 12px;
 `
-
-export const CategoryInfo = styled.div`
-    margin-bottom: 12px;
-`
-
-export const Info = styled.div``
 
 // category list
 interface CategoryItemProps {
@@ -44,7 +38,7 @@ export const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => <L
   color: var(--color-text);
   background-color: var(--color-category-chip);
   border: 2px solid ${({ active }) => (active ? 'var(--color-text);' : 'var(--color-background)')};
-  
+
   &:hover {
     color: var(--color-primary);
     border: 2px solid var(--color-primary);

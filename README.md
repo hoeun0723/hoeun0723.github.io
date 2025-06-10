@@ -8,18 +8,24 @@
 이번 블로그 제작이 추후 있을 저만의 기록소에서도 큰 역할을 해주고 추가적으로 코드를 짜고 유지보수하는 경험에서도 도움이 되길 바랍니다.
 
 ### 기술 스택
+
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white"> <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"> <img src="https://img.shields.io/badge/Gatsby-663399?style=for-the-badge&logo=Gatsby&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/Emotion-C865B9?style=flat&logo=emotion&logoColor=white"/>
 
 ## 남은 개발 목록
+
 - [x] : TOC
 - [x] : 허스키 (커밋 전 린트 및 프리티어 실행)
 - [x] : github action
 - [x] : 헤더 글
-- [ ] : About 작성하기
-- [ ] : 이전 포스트, 다음 포스트
-- [ ] : SEO 설정
+- [ ] : Bio
 - [x] : 다크모드 구현
+- [ ] : SEO 설정, site meta
+- [ ] : About 작성하기
 - [ ] : 리드미 작성
+
+### 그외
+- [ ] : 반응 및 조회수 표시
 - [ ] : 검색 기능
 - [ ] : 카테고리 및 시리즈 기능
+- [ ] : 이전 포스트 , 다음 포스트
 - [ ] : 맞춤법 검사 자동화

@@ -22,12 +22,12 @@ window.___navigate = pathname => {
 }
 
 export const decorators = [
-    Story => (
-        <ThemeProvider theme={theme}>
-            <GlobalStyle/>
-            <Story/>
-        </ThemeProvider>
-    )
+  Story => (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Story />
+    </ThemeProvider>
+  ),
 ]
 
 export const parameters = {

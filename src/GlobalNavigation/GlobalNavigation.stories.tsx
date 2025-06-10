@@ -1,5 +1,6 @@
-import GlobalNavigation from './index'
 import type { Meta, StoryObj } from '@storybook/react'
+
+import GlobalNavigation from './index'
 
 const meta: Meta<typeof GlobalNavigation> = {
   title: 'CATEGORY/GlobalNavigation',

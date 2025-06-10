@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-const MarkdownStyle = css`
+const markdownStyle = css`
   // Renderer Style
   display: flex;
   flex-direction: column;
@@ -104,7 +104,7 @@ const MarkdownStyle = css`
   }
 
   code[class*='language-'],
-  pre[class*='language-']{
+  pre[class*='language-'] {
     tab-size: 2;
   }
 
@@ -123,7 +123,7 @@ const MarkdownStyle = css`
       background-color: var(--color-table-background-color-second);
     }
   }
-  
+
   thead {
     display: table-header-group;
     vertical-align: middle;
@@ -182,4 +182,4 @@ const MarkdownStyle = css`
   }
 `
 
-export default MarkdownStyle
+export default markdownStyle

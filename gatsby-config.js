@@ -1,7 +1,7 @@
 const blogConfig = require('./blog-config')
 
 module.exports = {
-  pathPrefix: "/hoeun0723.github.io",
+  pathPrefix: '/hoeun0723.github.io',
   siteMetadata: { ...blogConfig },
   plugins: [
     {
@@ -21,18 +21,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `static`,
-        path: `${__dirname}/static`,
+        name: `assets`,
+        path: `${__dirname}/assets`,
       },
     },
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: ['auto','webp'],
+          formats: ['auto', 'webp'],
           quality: 100,
           placeholder: 'blurred',
-        }
+        },
       },
     },
     {

@@ -1,9 +1,9 @@
-import useUtterance from "@/hooks/useUtterance"
+import useUtterance from '@/hooks/useUtterance'
 
 const Comment = () => {
-    const {utteranceElement} = useUtterance()
+  const { utteranceElement } = useUtterance()
 
-    return <div ref={utteranceElement}/>
+  return <div ref={utteranceElement} />
 }
 
 export default Comment
