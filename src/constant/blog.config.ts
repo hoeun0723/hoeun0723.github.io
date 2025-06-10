@@ -1,7 +1,7 @@
 const BLOG_CONFIG = {
   title: `Hoeun.devlog`,
-  author: `Hoeun`,
-  introduction: `🖐안녕하세요. 왕호은의 블로그입니다. 저는 아래와 같은 고민을 하며 개발을 하고 있습니다.`,
+  author: `왕호은(@hoeun0723)`,
+  introduction: `고민, 문제해결`,
   siteUrl: `https://hoeun0723.github.io`,
   social: {
     email: `hoeun0723@naver.com`,
