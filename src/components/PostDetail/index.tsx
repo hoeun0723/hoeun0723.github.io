@@ -1,4 +1,4 @@
-import Comment from '@/components/Comment'
+import PostFooter from '@/components/PostDetail/PostFooter'
 import Layout from '@/Layout'
 import { PostPageItemType } from '@/types/PostItem.types'
 
@@ -30,7 +30,7 @@ const PostDetail = ({ postPageInfo }: PostPageInfoProps) => {
     <Layout>
       <PostHeader title={title} date={date} categories={categories} thumbnail={gatsbyImageData} />
       <PostBody tableOfContents={tableOfContents} html={html} />
-      <Comment />
+      <PostFooter />
     </Layout>
   )
 }
