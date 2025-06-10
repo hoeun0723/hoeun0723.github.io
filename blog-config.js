@@ -13,6 +13,11 @@ module.exports = {
   social: {
     email: 'hoeun0723@naver.com',
     github: `https://github.com/hoeun0723`,
+    til: 'https://github.com/hoeun0723/TIL',
+  },
+  seo: {
+    google: process.env.GATSBY_SEO_GOOGLE,
+    naver: process.env.GATSBY_SEO_NAVER,
   },
   utterances: {
     src: 'https://utteranc.es/client.js',
