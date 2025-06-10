@@ -1,53 +1,53 @@
 {
-    "env": {
-      "browser": true,
-      "es2021": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:@typescript-eslint/recommended-requiring-type-checking",
-      "plugin:prettier/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "import", "@typescript-eslint"],
+  "ignorePatterns": ["dist/", "node_modules/"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
       },
-      "ecmaVersion": 12,
-      "sourceType": "module",
-      "project": "./tsconfig.json"
-    },
-    "plugins": ["react", "import", "@typescript-eslint"],
-    "ignorePatterns": ["dist/", "node_modules/"],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "endOfLine": "auto",
+      {
+        "usePrettierrc": true
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", ["parent", "sibling"], "index"],
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
         },
-        {
-          "usePrettierrc": true
-        }
-      ],
-      "import/order": [
-        "error",
-        {
-          "groups": ["builtin", "external", ["parent", "sibling"], "index"],
-          "pathGroups": [
-            {
-              "pattern": "@/**",
-              "group": "external",
-              "position": "after"
-            }
-          ],
-          "alphabetize": {
-            "order": "asc",
-            "caseInsensitive": true
-          },
-          "newlines-between": "always"
-        }
-      ]
-    }
+        "newlines-between": "always"
+      }
+    ]
   }
+}

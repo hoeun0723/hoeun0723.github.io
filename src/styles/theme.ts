@@ -25,93 +25,93 @@ const FONTS = {
 }
 
 const COLORS = {
-    GREYSCALE: {
-        '050': '#FAFAFA',
-        '100': '#F5F5F5',
-        '200': '#EEEEEE',
-        '300': '#E0E0E0',
-        '400': '#BDBDBD',
-        '500': '#9E9E9E',
-        '600': '#757575',
-        '700': '#616161',
-        '800': '#424242',
-        '900': '#212121',
-    },
-    BLACK: '#000',
-    WHITE: '#FFF',
+  GREYSCALE: {
+    '050': '#FAFAFA',
+    '100': '#F5F5F5',
+    '200': '#EEEEEE',
+    '300': '#E0E0E0',
+    '400': '#BDBDBD',
+    '500': '#9E9E9E',
+    '600': '#757575',
+    '700': '#616161',
+    '800': '#424242',
+    '900': '#212121',
+  },
+  BLACK: '#000',
+  WHITE: '#FFF',
 }
 
 const typography = {
-    // Display
-    displayBoldLarge: css`
-      font-size: ${FONTS.SIZE.X_LARGE};
-      line-height: 64px;
-      font-weight: ${FONTS.WEIGHT.BOLD};
-    `,
-    displayBold: css`
-      font-size: ${FONTS.SIZE.X_LARGE};
-      line-height: 48px;
-      font-weight: ${FONTS.WEIGHT.BOLD};
-    `,
-    displayRegular: css`
-      font-size: ${FONTS.SIZE.X_LARGE};
-      line-height: 48px;
-      font-weight: ${FONTS.WEIGHT.REGULAR};
-    `,
-    // Link
-    linkLarge: css`
-      font-size: ${FONTS.SIZE.LARGE};
-      line-height: 40px;
-      font-weight: ${FONTS.WEIGHT.BOLD};
-    `,
-    linkMedium: css`
-      font-size: ${FONTS.SIZE.MEDIUM};
-      line-height: 32px;
-      font-weight: ${FONTS.WEIGHT.BOLD};
-    `,
-    linkBase: css`
-      font-size: ${FONTS.SIZE.BASE};
-      line-height: 30px;
-      font-weight: ${FONTS.WEIGHT.BOLD};
-    `,
-    linkSmall: css`
-      font-size: ${FONTS.SIZE.SMALL};
-      line-height: 28px;
-      font-weight: ${FONTS.WEIGHT.BOLD};
-    `,
-    linkXSmall: css`
-      font-size: ${FONTS.SIZE.X_SMALL};
-      line-height: 20px;
-      font-weight: ${FONTS.WEIGHT.BOLD};
-    `,
-    // Text
-    textLarge: css`
-      font-size: ${FONTS.SIZE.LARGE};
-      line-height: 40px;
-      font-weight: ${FONTS.WEIGHT.REGULAR};
-    `,
-    textMedium: css`
-      font-size: ${FONTS.SIZE.MEDIUM};
-      line-height: 32px;
-      font-weight: ${FONTS.WEIGHT.REGULAR};
-    `,
-    textBase: css`
-      font-size: ${FONTS.SIZE.BASE};
-      line-height: 30px;
-      font-weight: ${FONTS.WEIGHT.REGULAR};
-    `,
-    textSmall: css`
-      font-size: ${FONTS.SIZE.SMALL};
-      line-height: 28px;
-      font-weight: ${FONTS.WEIGHT.REGULAR};
-    `,
-    textXSmall: css`
-      font-size: ${FONTS.SIZE.X_SMALL};
-      line-height: 20px;
-      font-weight: ${FONTS.WEIGHT.REGULAR};
-    `,
-  }
-  
+  // Display
+  displayBoldLarge: css`
+    font-size: ${FONTS.SIZE.X_LARGE};
+    line-height: 64px;
+    font-weight: ${FONTS.WEIGHT.BOLD};
+  `,
+  displayBold: css`
+    font-size: ${FONTS.SIZE.X_LARGE};
+    line-height: 48px;
+    font-weight: ${FONTS.WEIGHT.BOLD};
+  `,
+  displayRegular: css`
+    font-size: ${FONTS.SIZE.X_LARGE};
+    line-height: 48px;
+    font-weight: ${FONTS.WEIGHT.REGULAR};
+  `,
+  // Link
+  linkLarge: css`
+    font-size: ${FONTS.SIZE.LARGE};
+    line-height: 40px;
+    font-weight: ${FONTS.WEIGHT.BOLD};
+  `,
+  linkMedium: css`
+    font-size: ${FONTS.SIZE.MEDIUM};
+    line-height: 32px;
+    font-weight: ${FONTS.WEIGHT.BOLD};
+  `,
+  linkBase: css`
+    font-size: ${FONTS.SIZE.BASE};
+    line-height: 30px;
+    font-weight: ${FONTS.WEIGHT.BOLD};
+  `,
+  linkSmall: css`
+    font-size: ${FONTS.SIZE.SMALL};
+    line-height: 28px;
+    font-weight: ${FONTS.WEIGHT.BOLD};
+  `,
+  linkXSmall: css`
+    font-size: ${FONTS.SIZE.X_SMALL};
+    line-height: 20px;
+    font-weight: ${FONTS.WEIGHT.BOLD};
+  `,
+  // Text
+  textLarge: css`
+    font-size: ${FONTS.SIZE.LARGE};
+    line-height: 40px;
+    font-weight: ${FONTS.WEIGHT.REGULAR};
+  `,
+  textMedium: css`
+    font-size: ${FONTS.SIZE.MEDIUM};
+    line-height: 32px;
+    font-weight: ${FONTS.WEIGHT.REGULAR};
+  `,
+  textBase: css`
+    font-size: ${FONTS.SIZE.BASE};
+    line-height: 30px;
+    font-weight: ${FONTS.WEIGHT.REGULAR};
+  `,
+  textSmall: css`
+    font-size: ${FONTS.SIZE.SMALL};
+    line-height: 28px;
+    font-weight: ${FONTS.WEIGHT.REGULAR};
+  `,
+  textXSmall: css`
+    font-size: ${FONTS.SIZE.X_SMALL};
+    line-height: 20px;
+    font-weight: ${FONTS.WEIGHT.REGULAR};
+  `,
+}
+
 const theme = { FONTS, typography, COLORS, MarkdownStyle }
 
 export default theme
