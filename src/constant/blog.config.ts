@@ -13,6 +13,7 @@ interface ConfigType {
   social: {
     email: string
     github: string
+    til: string
   }
   utterances: {
     src: string
