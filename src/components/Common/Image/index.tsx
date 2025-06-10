@@ -8,7 +8,7 @@ import { GatsbyImageDataType } from '@/types/gatsby.type'
 const ImageSizeMap = {
   s: '32px',
   m: '64px',
-  l: '128px',
+  l: ' 128px',
 }
 
 type ImageSize = keyof typeof ImageSizeMap
@@ -43,12 +43,12 @@ interface GatsbyImgProps extends Omit<ImageProps, 'src'> {
 }
 
 const Image = ({ src, size = 'm', isCircle = false, ...rest }: ImageProps) => {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-  const assetsImages = useStaticQuery<AssetsImageType>(imageQuery)
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const assetImages = useStaticQuery<AssetsImageType>(imageQuery)
 
   const target = useMemo(
-    () => assetsImages.images.edges.find(({ node }) => src === node.relativePath),
-    [assetsImages, src],
+    () => assetImages.images.edges.find(({ node }) => src === node.relativePath),
+    [assetImages, src],
   )
 
   if (!target) return null
@@ -69,18 +69,18 @@ const SImage = styled((props: GatsbyImgProps) => <GatsbyImage {...props} />)`
 export default Image
 
 const imageQuery = graphql`
-    query {
-        images: allFile(filter: {sourceInstanceName: {eq: "assets}}) {
-            edges {
-                node {
-                    relativePath
-                    extension
-                    publicURL
-                    childImageSharp {
-                        gatsbyImageData(layout: CONSTRAINED)
-                    }
-                }
-            }
+  query {
+    images: allFile(filter: { sourceInstanceName: { eq: "assets" } }) {
+      edges {
+        node {
+          relativePath
+          extension
+          publicURL
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED)
+          }
         }
+      }
     }
+  }
 `
