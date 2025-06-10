@@ -7,3 +7,13 @@ export interface GatsbyImgProps {
   alt: string
   className?: string
 }
+
+export interface SiteMetaData {
+  author: string
+  title: string
+  siteUrl: string
+  description: string
+  image: string
+  keywords: string[]
+  favicon: string
+}
