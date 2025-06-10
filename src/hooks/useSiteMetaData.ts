@@ -13,21 +13,23 @@ export const useSiteMetadata = () => {
     graphql`
       query SiteMetaData {
         site {
-          author
-          title
-          siteUrl
-          description
-          image
-          keywords
-          favicon
-          social {
-            email
-            github
-            til
-          }
-          seo {
-            google
-            naver
+          siteMetadata {
+            author
+            title
+            siteUrl
+            description
+            image
+            keywords
+            favicon
+            social {
+              email
+              github
+              til
+            }
+            seo {
+              google
+              naver
+            }
           }
         }
       }
