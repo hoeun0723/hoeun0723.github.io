@@ -13,12 +13,6 @@ export const Container = styled.div`
   border-radius: 12px;
 `
 
-export const CategoryInfo = styled.div`
-  margin-bottom: 12px;
-`
-
-export const Info = styled.div``
-
 // category list
 interface CategoryItemProps {
   active: boolean

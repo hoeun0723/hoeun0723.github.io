@@ -1,14 +1,14 @@
 import CategoryList, { CategoryListProps } from '@/components/CategoryHeader/CategoryList'
 
 import * as S from './CategoryHeader.style'
-import CategoryInfo from './CategoryInfo'
+import Bio from '../Bio'
 
 export type CategoryHeaderProps = CategoryListProps
 
 const CategoryHeader = ({ selectedCategory, categoryList }: CategoryHeaderProps) => {
   return (
     <S.Container>
-      <CategoryInfo />
+      <Bio />
       <CategoryList selectedCategory={selectedCategory} categoryList={categoryList} />
     </S.Container>
   )
