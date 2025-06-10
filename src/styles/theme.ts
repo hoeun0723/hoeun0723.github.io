@@ -1,10 +1,10 @@
 import { css } from '@emotion/react'
 
-import MarkdownStyle from './markdown'
+import markdownStyle from './markdown'
 
 const calcRem = (size: number): string => `${size / 16}rem`
 
-const FONTS = {
+const fonts = {
   SIZE: {
     X_SMALL: calcRem(12),
     SMALL: calcRem(14),
@@ -24,99 +24,81 @@ const FONTS = {
   },
 }
 
-const COLORS = {
-  GREYSCALE: {
-    '050': '#FAFAFA',
-    '100': '#F5F5F5',
-    '200': '#EEEEEE',
-    '300': '#E0E0E0',
-    '400': '#BDBDBD',
-    '500': '#9E9E9E',
-    '600': '#757575',
-    '700': '#616161',
-    '800': '#424242',
-    '900': '#212121',
-  },
-  BLACK: '#000',
-  WHITE: '#FFF',
-}
-
 const typography = {
   // Display
   displayBoldLarge: css`
-    font-size: ${FONTS.SIZE.X_LARGE};
+    font-size: ${fonts.SIZE.X_LARGE};
     line-height: 64px;
-    font-weight: ${FONTS.WEIGHT.BOLD};
+    font-weight: ${fonts.WEIGHT.BOLD};
   `,
   displayBold: css`
-    font-size: ${FONTS.SIZE.X_LARGE};
+    font-size: ${fonts.SIZE.X_LARGE};
     line-height: 48px;
-    font-weight: ${FONTS.WEIGHT.BOLD};
+    font-weight: ${fonts.WEIGHT.BOLD};
   `,
   displayRegular: css`
-    font-size: ${FONTS.SIZE.X_LARGE};
+    font-size: ${fonts.SIZE.X_LARGE};
     line-height: 48px;
-    font-weight: ${FONTS.WEIGHT.REGULAR};
+    font-weight: ${fonts.WEIGHT.REGULAR};
   `,
   // Link
   linkLarge: css`
-    font-size: ${FONTS.SIZE.LARGE};
+    font-size: ${fonts.SIZE.LARGE};
     line-height: 40px;
-    font-weight: ${FONTS.WEIGHT.BOLD};
+    font-weight: ${fonts.WEIGHT.BOLD};
   `,
   linkMedium: css`
-    font-size: ${FONTS.SIZE.MEDIUM};
+    font-size: ${fonts.SIZE.MEDIUM};
     line-height: 32px;
-    font-weight: ${FONTS.WEIGHT.BOLD};
+    font-weight: ${fonts.WEIGHT.BOLD};
   `,
   linkBase: css`
-    font-size: ${FONTS.SIZE.BASE};
+    font-size: ${fonts.SIZE.BASE};
     line-height: 30px;
-    font-weight: ${FONTS.WEIGHT.BOLD};
+    font-weight: ${fonts.WEIGHT.BOLD};
   `,
   linkSmall: css`
-    font-size: ${FONTS.SIZE.SMALL};
+    font-size: ${fonts.SIZE.SMALL};
     line-height: 28px;
-    font-weight: ${FONTS.WEIGHT.BOLD};
+    font-weight: ${fonts.WEIGHT.BOLD};
   `,
   linkXSmall: css`
-    font-size: ${FONTS.SIZE.X_SMALL};
+    font-size: ${fonts.SIZE.X_SMALL};
     line-height: 20px;
-    font-weight: ${FONTS.WEIGHT.BOLD};
+    font-weight: ${fonts.WEIGHT.BOLD};
   `,
   // Text
   textLarge: css`
-    font-size: ${FONTS.SIZE.LARGE};
+    font-size: ${fonts.SIZE.LARGE};
     line-height: 40px;
-    font-weight: ${FONTS.WEIGHT.REGULAR};
+    font-weight: ${fonts.WEIGHT.REGULAR};
   `,
   textMedium: css`
-    font-size: ${FONTS.SIZE.MEDIUM};
+    font-size: ${fonts.SIZE.MEDIUM};
     line-height: 32px;
-    font-weight: ${FONTS.WEIGHT.REGULAR};
+    font-weight: ${fonts.WEIGHT.REGULAR};
   `,
   textBase: css`
-    font-size: ${FONTS.SIZE.BASE};
+    font-size: ${fonts.SIZE.BASE};
     line-height: 30px;
-    font-weight: ${FONTS.WEIGHT.REGULAR};
+    font-weight: ${fonts.WEIGHT.REGULAR};
   `,
   textSmall: css`
-    font-size: ${FONTS.SIZE.SMALL};
+    font-size: ${fonts.SIZE.SMALL};
     line-height: 28px;
-    font-weight: ${FONTS.WEIGHT.REGULAR};
+    font-weight: ${fonts.WEIGHT.REGULAR};
   `,
   textXSmall: css`
-    font-size: ${FONTS.SIZE.X_SMALL};
+    font-size: ${fonts.SIZE.X_SMALL};
     line-height: 20px;
-    font-weight: ${FONTS.WEIGHT.REGULAR};
+    font-weight: ${fonts.WEIGHT.REGULAR};
   `,
 }
 
-const theme = { FONTS, typography, COLORS, MarkdownStyle }
+const theme = { fonts, typography, markdownStyle }
 
 export default theme
 
-export type COLORS = typeof COLORS
-export type FONTS = typeof FONTS
-export type Typography = typeof typography
-export type MarkdownStyleType = typeof MarkdownStyle
+export type fonts = typeof fonts
+export type TypographyType = typeof typography
+export type MarkdownStyleType = typeof markdownStyle

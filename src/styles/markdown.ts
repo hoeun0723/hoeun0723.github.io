@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-const MarkdownStyle = css`
+const markdownStyle = css`
   // Renderer Style
   display: flex;
   flex-direction: column;
@@ -182,4 +182,4 @@ const MarkdownStyle = css`
   }
 `
 
-export default MarkdownStyle
+export default markdownStyle

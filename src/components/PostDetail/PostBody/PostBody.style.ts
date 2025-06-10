@@ -5,7 +5,7 @@ export const Container = styled.div`
 `
 
 export const MarkdownRenderer = styled.article`
-  ${({ theme: { MarkdownStyle } }) => MarkdownStyle}
+  ${({ theme: { markdownStyle } }) => markdownStyle}
 `
 
 export const TableOfContent = styled.aside`

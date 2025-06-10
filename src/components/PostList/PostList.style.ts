@@ -51,7 +51,7 @@ export const Title = styled.h2`
 
 export const Date = styled.span`
   ${({ theme: { typography } }) => typography.textSmall}
-  color: ${({ theme: { COLORS } }) => COLORS.GREYSCALE[600]};
+  color: var(--color-text);
   line-height: 16px;
 `
 
