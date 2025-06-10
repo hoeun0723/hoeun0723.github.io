@@ -16,4 +16,24 @@ export interface SiteMetaData {
   image: string
   keywords: string[]
   favicon: string
+  social: {
+    email: string
+    github: string
+    til: string
+  }
+  seo: {
+    google: string
+    naver: string
+  }
+}
+
+export interface ConfigType extends SiteMetaData {
+  utterances: {
+    src: string
+    repo: string
+    theme: string
+    label: string
+    crossorigin: string
+    async: string
+  }
 }

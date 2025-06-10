@@ -22,8 +22,8 @@ const PostTemplate = ({
   },
   location: { href },
 }: PostTemplateProps) => {
-  const { author, favicon } = useSiteMetadata()
-  return <PostDetail postPageInfo={edges[0]} href={href} author={author} favicon={favicon} />
+  const { author, favicon, seo } = useSiteMetadata()
+  return <PostDetail postPageInfo={edges[0]} href={href} author={author} favicon={favicon} seo={seo} />
 }
 
 export default PostTemplate

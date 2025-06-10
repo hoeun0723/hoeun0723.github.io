@@ -11,9 +11,13 @@ interface PostPageInfoProps {
   href: string
   author: string
   favicon: string
+  seo: {
+    google: string
+    naver: string
+  }
 }
 
-const PostDetail = ({ postPageInfo, href, author, favicon }: PostPageInfoProps) => {
+const PostDetail = ({ postPageInfo, href, author, favicon, seo }: PostPageInfoProps) => {
   const {
     node: {
       tableOfContents,
@@ -35,12 +39,13 @@ const PostDetail = ({ postPageInfo, href, author, favicon }: PostPageInfoProps) 
     <Layout>
       <SEO
         author={author}
-        url={href}
+        siteUrl={href}
         title={title}
         description={summary}
         image={publicURL}
         keywords={categories}
         favicon={favicon}
+        seo={seo}
       />
       <PostHeader title={title} date={date} categories={categories} thumbnail={gatsbyImageData} />
       <PostBody tableOfContents={tableOfContents} html={html} />
