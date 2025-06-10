@@ -1,5 +1,4 @@
 import { graphql } from 'gatsby'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
 import queryString, { ParsedQuery } from 'query-string'
 import { useMemo } from 'react'
 
@@ -18,27 +17,13 @@ interface IndexPageProps {
     allMarkdownRemark: {
       edges: PostListItemType[]
     }
-    file: {
-      childImageSharp: {
-        gatsbyImageData: IGatsbyImageData
-      }
-    }
   }
-}
-
-const CATEGORY_LIST = {
-  All: 5,
-  Web: 3,
-  Mobile: 2,
 }
 
 const IndexPage = ({
   location: { search, hash },
   data: {
     allMarkdownRemark: { edges },
-    file: {
-      childImageSharp: { gatsbyImageData },
-    },
   },
 }: IndexPageProps) => {
   const parsed: ParsedQuery<string> = queryString.parse(hash)
@@ -93,11 +78,6 @@ export const getPostList = graphql`
             categories
           }
         }
-      }
-    }
-    file(name: { eq: "profile-image" }) {
-      childImageSharp {
-        gatsbyImageData(width: 120, height: 120)
       }
     }
   }
