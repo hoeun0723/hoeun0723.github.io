@@ -1,6 +1,6 @@
 export const isBrowser = typeof window !== 'undefined'
 
-export const copToClipBoard = (text: string) => {
+export const copyToClipBoard = (text: string) => {
   isBrowser &&
     window.navigator.clipboard
       .writeText(text)
