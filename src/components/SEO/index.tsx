@@ -17,6 +17,7 @@ const SEO = ({ lang = 'ko', author, title, description, siteUrl, image, keywords
       <link rel="icon" type="image/png" href={favicon} sizes="16x16" />
       <meta name="google-site-verification" content={seo.google} />
       <meta name="naver-site-verification" content={seo.naver} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       {/* property: og */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
