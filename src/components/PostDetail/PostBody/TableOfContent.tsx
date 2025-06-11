@@ -1,4 +1,4 @@
-import * as S from './PostBody.style'
+import * as S from '../PostDetail.style'
 
 export interface TableOfContentProps {
   tableOfContents: string

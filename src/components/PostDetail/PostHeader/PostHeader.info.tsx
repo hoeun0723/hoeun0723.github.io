@@ -1,4 +1,4 @@
-import * as S from './PostHeader.style'
+import * as S from '../PostDetail.style'
 
 export interface PostHeadInfoProps {
   title: string
