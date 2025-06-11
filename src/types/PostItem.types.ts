@@ -19,21 +19,11 @@ export interface PostListItemType {
     id: string
     fields: {
       slug: string
+      readingTime: {
+        text: string
+      }
     }
     frontmatter: PostFrontmatterType
-  }
-}
-
-export type PostFrontmatterTypeOmitThumbnail = Omit<PostFrontmatterType, 'thumbnail'>
-
-export interface PostListItemOmitThumbnail {
-  node: {
-    tableOfContent: string
-    id: string
-    fields: {
-      slug: string
-    }
-    frontmatter: PostFrontmatterTypeOmitThumbnail
   }
 }
 
@@ -49,5 +39,11 @@ export interface PostPageItemType {
     tableOfContents: string
     html: string
     frontmatter: PostFrontmatterType
+    fields: {
+      slug: string
+      readingTime: {
+        text: string
+      }
+    }
   }
 }
