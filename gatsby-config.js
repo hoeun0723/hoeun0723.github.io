@@ -1,12 +1,8 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 const blogConfig = require('./blog-config')
 
 module.exports = {
   pathPrefix: '/hoeun0723.github.io',
-  siteMetadata: blogConfig,
+  siteMetadata: {...blogConfig},
   plugins: [
     {
       resolve: `gatsby-plugin-typescript`,

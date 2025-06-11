@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet'
 
-import { SiteMetaData } from '@/types/gatsby.type'
+import { ConfigType } from '@/types/gatsby.type'
 
-interface SEOProps extends Omit<SiteMetaData, 'social'> {
+interface SEOProps extends Omit<ConfigType, 'social' | 'utterances'> {
   lang?: string
 }
 

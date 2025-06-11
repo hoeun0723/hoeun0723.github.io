@@ -1,11 +1,12 @@
-import BLOG_CONFIG from '@/constant/blog.config'
+import useBlogConfig from '@/hooks/useBlogConfig'
 
 import * as S from './MainIndo.style'
 
 const MainInfo = () => {
+  const { description } = useBlogConfig()
   return (
     <S.MainInfo>
-      <S.Info>{BLOG_CONFIG.introduction}</S.Info>
+      <S.Info>{description}</S.Info>
     </S.MainInfo>
   )
 }
