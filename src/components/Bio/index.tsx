@@ -2,21 +2,22 @@ import { FaGithub } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 
 import Image from '@/components/Common/Image'
-import BLOG_CONFIG from '@/constant/blog.config'
+import useBlogConfig from '@/hooks/useBlogConfig'
 import { copyToClipBoard } from '@/utils'
 
 import * as S from './Bio.style'
 
 const Bio = () => {
+  const { social, author, description } = useBlogConfig()
   const onClickMailConfig = () => {
-    copyToClipBoard(BLOG_CONFIG.social.email)
+    copyToClipBoard(social.email)
   }
   return (
     <S.Container>
       <Image src="profile-image.png" isCircle />
       <S.Info>
-        <S.Author>{BLOG_CONFIG.author}</S.Author>
-        <S.Desc>{BLOG_CONFIG.description}</S.Desc>
+        <S.Author>{author}</S.Author>
+        <S.Desc>{description}</S.Desc>
         <S.Socials>
           <li>
             <a href="#" onClick={onClickMailConfig}>
@@ -25,13 +26,13 @@ const Bio = () => {
             </a>
           </li>
           <li>
-            <a href={BLOG_CONFIG.social.github} target="_blank">
+            <a href={social.github} target="_blank">
               <FaGithub />
               Github
             </a>
           </li>
           <li>
-            <a href={BLOG_CONFIG.social.til} target="_blank">
+            <a href={social.til} target="_blank">
               <FaGithub />
               TIL
             </a>

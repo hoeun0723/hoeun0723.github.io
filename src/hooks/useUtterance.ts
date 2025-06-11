@@ -1,16 +1,18 @@
 import { useEffect, useRef } from 'react'
 
-import BLOG_CONFIG from '@/constant/blog.config'
 import { useThemeModeProviderState } from '@/context/ThemeMode.Provider'
+
+import useBlogConfig from './useBlogConfig'
 
 const useUtterance = () => {
   const { isDarkMode } = useThemeModeProviderState()
+  const { utterances: CONFIG } = useBlogConfig()
   const utteranceTheme = isDarkMode ? 'github-dark' : 'github-light'
   const utteranceElement = useRef<HTMLDivElement>(null)
 
   const createUtterance = () => {
     const utterances: HTMLScriptElement = document.createElement('script')
-    const attributes = { ...BLOG_CONFIG.utterances, theme: utteranceTheme }
+    const attributes = { ...CONFIG, theme: utteranceTheme }
 
     Object.entries(attributes).forEach(([key, value]) => {
       utterances.setAttribute(key, value)

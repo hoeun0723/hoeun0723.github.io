@@ -8,7 +8,7 @@ export interface GatsbyImgProps {
   className?: string
 }
 
-export interface SiteMetaData {
+export interface ConfigType {
   author: string
   title: string
   siteUrl: string
@@ -25,9 +25,6 @@ export interface SiteMetaData {
     google: string
     naver: string
   }
-}
-
-export interface ConfigType extends SiteMetaData {
   utterances: {
     src: string
     repo: string
