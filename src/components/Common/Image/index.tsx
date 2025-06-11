@@ -6,9 +6,9 @@ import { useMemo } from 'react'
 import { GatsbyImageDataType } from '@/types/gatsby.type'
 
 const ImageSizeMap = {
-  s: '32px',
-  m: '64px',
-  l: ' 128px',
+  s: 'var(--icon-medium)',
+  m: 'var(--icon-large)',
+  l: 'var(--icon-xLarge)',
 }
 
 type ImageSize = keyof typeof ImageSizeMap
