@@ -2,6 +2,7 @@ import { Global, css } from '@emotion/react'
 
 import fonts from '@/fonts'
 
+import media from './media' // css(@emotion/react)에서 theme를 전달받지 못해서 직접 import해서 사용
 import Normalize from './Normalize'
 
 const styles = css`
@@ -13,36 +14,35 @@ const styles = css`
     margin: 0;
     padding: 0;
   }
-  button,
-  input,
-  select,
-  textarea {
-    background-color: transparent;
-    border: 0;
-    &:focus {
-      outline: none;
-      box-shadow: none;
+
+  html {
+    --z-index-top: 999;
+    --padding-xl: 100px;
+    --padding-l: 60px;
+    --padding-m: 50px;
+    --main-content-width: 768px;
+    --space-s: 8px;
+    --space-m: 12px;
+    --space-l: 16px;
+    --icon-small: 18px;
+    --icon-medium: 24px;
+    --icon-large: 36px;
+    --icon-xLarge: 64px;
+    @media ${media.medium} {
+      --padding-xl: 90px;
+      --padding-m: 30px;
+      --space-s: 6px;
+      --space-m: 10px;
+      --main-content-width: 95%;
     }
-  }
-  html,
-  body,
-  #___gatsby {
-    height: 100%;
-    scroll-behavior: smooth;
-  }
 
-  a,
-  a:hover,
-  button {
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  ul,
-  li {
-    padding: 0;
-    list-style: none;
+    @media ${media.small} {
+      --padding-xl: 80px;
+      --padding-m: 20px;
+      --space-s: 4px;
+      --space-m: 8px;
+      --main-content-width: 95%;
+    }
   }
 
   body {
@@ -85,6 +85,35 @@ const styles = css`
     --color-primary: #79c0ff;
     --color-secondary: #1f6feb;
     /* --color-tertiary:  */
+  }
+  button,
+  input,
+  select,
+  textarea {
+    background-color: transparent;
+    border: 0;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  html,
+  body,
+  #___gatsby {
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+  a,
+  a:hover,
+  button {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  ul,
+  li {
+    padding: 0;
+    list-style: none;
   }
 `
 
