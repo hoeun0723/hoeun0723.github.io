@@ -31,6 +31,7 @@ export interface ConfigType {
     theme: string
     label: string
     crossorigin: string
+    issueTerm: string
     async: string
   }
 }

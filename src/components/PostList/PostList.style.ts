@@ -49,10 +49,12 @@ export const Title = styled.h2`
   ${({ theme: { typography } }) => typography.linkLarge}
 `
 
-export const Date = styled.span`
+export const Info = styled.span`
   ${({ theme: { typography } }) => typography.textSmall}
   color: var(--color-text);
   line-height: 16px;
+  display: flex;
+  gap: 6px;
 `
 
 export const Category = styled.div`

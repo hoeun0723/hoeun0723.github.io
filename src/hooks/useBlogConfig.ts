@@ -36,6 +36,7 @@ const useBlogConfig = () => {
               theme
               label
               crossorigin
+              issueTerm
               async
             }
           }

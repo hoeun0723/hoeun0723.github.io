@@ -36,12 +36,12 @@ const IndexPage = ({
     () =>
       edges.reduce(
         (
-          categoryList: CategoryListProps['categoryList'],
+          categoryList: CategoryListProps['categoryList'], //acc
           {
             node: {
               frontmatter: { categories },
             },
-          }: PostType,
+          }: PostType, //cur
         ) => {
           categories.forEach(category => {
             if (categoryList[category] === undefined) categoryList[category] = 1
@@ -83,11 +83,14 @@ export const getPostList = graphql`
           id
           fields {
             slug
+            readingTime {
+              text
+            }
           }
           frontmatter {
             title
             summary
-            date(formatString: "YYYY.MM.DD.")
+            date(formatString: "YYYY-MM-DD")
             categories
           }
         }

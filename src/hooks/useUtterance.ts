@@ -12,7 +12,7 @@ const useUtterance = () => {
 
   const createUtterance = () => {
     const utterances: HTMLScriptElement = document.createElement('script')
-    const attributes = { ...CONFIG, theme: utteranceTheme }
+    const attributes = { ...CONFIG, 'issue-term': CONFIG.issueTerm, theme: utteranceTheme }
 
     Object.entries(attributes).forEach(([key, value]) => {
       utterances.setAttribute(key, value)

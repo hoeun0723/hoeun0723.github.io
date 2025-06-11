@@ -1,17 +1,20 @@
-import { PostFrontmatterTypeOmitThumbnail } from '@/types/PostItem.types'
+import { PostFrontmatterType } from '@/types/PostItem.types'
 
 import * as S from './PostList.style'
 
-export interface PostItemProps extends PostFrontmatterTypeOmitThumbnail {
+export interface PostItemProps extends PostFrontmatterType {
   link: string
+  readingTime: string
 }
 
-const PostItem = ({ title, date, categories, summary, link }: PostItemProps) => {
+const PostItem = ({ title, date, categories, summary, link, readingTime }: PostItemProps) => {
   return (
     <S.PostItemWrapper to={link}>
       <S.PostItemContent>
         <S.Title>{title}</S.Title>
-        <S.Date>{date}</S.Date>
+        <S.Info>
+          <span>{date}</span>·<span>{readingTime}</span>
+        </S.Info>
         <S.Category>
           {categories.map(category => (
             <S.CategoryItem key={category}>{category}</S.CategoryItem>

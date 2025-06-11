@@ -1,13 +1,13 @@
 import { useMemo } from 'react'
 
 import PostItem from '@/components/PostList/PostItem'
-import { PostListItemOmitThumbnail } from '@/types/PostItem.types'
+import { PostListItemType } from '@/types/PostItem.types'
 
 import * as S from './PostList.style'
 
 export interface PostListProps {
   selectedCategory: string
-  posts: PostListItemOmitThumbnail[]
+  posts: PostListItemType[]
 }
 
 const PostList = ({ selectedCategory, posts }: PostListProps) => {
@@ -19,7 +19,7 @@ const PostList = ({ selectedCategory, posts }: PostListProps) => {
           node: {
             frontmatter: { categories },
           },
-        }: PostListItemOmitThumbnail) => (selectedCategory !== 'All' ? categories.includes(selectedCategory) : true),
+        }: PostListItemType) => (selectedCategory !== 'All' ? categories.includes(selectedCategory) : true),
       ),
     [selectedCategory],
   )
@@ -30,11 +30,11 @@ const PostList = ({ selectedCategory, posts }: PostListProps) => {
         ({
           node: {
             id,
-            fields: { slug },
+            fields: { slug, readingTime },
             frontmatter,
           },
-        }: PostListItemOmitThumbnail) => (
-          <PostItem {...frontmatter} link={slug} key={id} />
+        }: PostListItemType) => (
+          <PostItem key={id} link={slug} readingTime={readingTime.text} {...frontmatter} />
         ),
       )}
     </S.Container>

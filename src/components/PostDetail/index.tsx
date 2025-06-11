@@ -32,6 +32,7 @@ const PostDetail = ({ postPageInfo, href, author, favicon, seo }: PostPageInfoPr
           publicURL,
         },
       },
+      fields: { readingTime },
     },
   } = postPageInfo
 
@@ -47,7 +48,13 @@ const PostDetail = ({ postPageInfo, href, author, favicon, seo }: PostPageInfoPr
         favicon={favicon}
         seo={seo}
       />
-      <PostHeader title={title} date={date} categories={categories} thumbnail={gatsbyImageData} />
+      <PostHeader
+        title={title}
+        date={date}
+        categories={categories}
+        thumbnail={gatsbyImageData}
+        readingTime={readingTime.text}
+      />
       <PostBody tableOfContents={tableOfContents} html={html} />
       <PostFooter />
     </Layout>
