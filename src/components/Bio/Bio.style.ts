@@ -15,7 +15,10 @@ export const Info = styled.div`
 
 export const Author = styled.h3``
 
-export const Desc = styled.div``
+export const Desc = styled.div`
+  ${({ theme: { typography } }) => typography.textBase}
+  line-height: 1.4;
+`
 
 export const Socials = styled.ul`
   display: flex;
