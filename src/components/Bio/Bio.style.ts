@@ -31,7 +31,7 @@ export const Socials = styled.ul`
     }
   }
   a > svg {
-    width: 18px;
-    height: 18px;
+    width: var(--icon-small);
+    height: var(--icon-small);
   }
 `
