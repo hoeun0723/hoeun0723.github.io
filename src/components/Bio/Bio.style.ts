@@ -19,16 +19,19 @@ export const Desc = styled.div``
 
 export const Socials = styled.ul`
   display: flex;
-  gap: 8px;
+  gap: 12px;
   a {
     color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 4px;
 
     :hover {
       color: var(--color-primary);
     }
   }
   a > svg {
-    width: 28px;
-    height: 28px;
+    width: 18px;
+    height: 18px;
   }
 `

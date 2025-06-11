@@ -16,16 +16,24 @@ const Bio = () => {
       <Image src="profile-image.png" isCircle />
       <S.Info>
         <S.Author>{BLOG_CONFIG.author}</S.Author>
-        <S.Desc>{BLOG_CONFIG.introduction}</S.Desc>
+        <S.Desc>{BLOG_CONFIG.description}</S.Desc>
         <S.Socials>
-          <li>
-            <a href={BLOG_CONFIG.social.github} target="_blank">
-              <FaGithub />
-            </a>
-          </li>
           <li>
             <a href="#" onClick={onClickMailConfig}>
               <HiOutlineMail />
+              Mail
+            </a>
+          </li>
+          <li>
+            <a href={BLOG_CONFIG.social.github} target="_blank">
+              <FaGithub />
+              Github
+            </a>
+          </li>
+          <li>
+            <a href={BLOG_CONFIG.social.til} target="_blank">
+              <FaGithub />
+              TIL
             </a>
           </li>
         </S.Socials>

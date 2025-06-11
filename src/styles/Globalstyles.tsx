@@ -78,7 +78,7 @@ const styles = css`
     --color-anchor-text: #0076d1;
     --color-code-background: #495057;
     --color-code-text: #f8f9fa;
-    --color-table-background-color: #202b38;
+    --color-table-background-color: #151519;
     --color-table-background-color-second: #0d1117;
     --color-table-border: #424242;
     --color-navigation-shadow: rgba(0, 0, 0, 0.08);

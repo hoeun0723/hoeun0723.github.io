@@ -1,8 +1,12 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const blogConfig = require('./blog-config')
 
 module.exports = {
   pathPrefix: '/hoeun0723.github.io',
-  siteMetadata: { ...blogConfig },
+  siteMetadata: blogConfig,
   plugins: [
     {
       resolve: `gatsby-plugin-typescript`,
@@ -21,8 +25,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
-        path: `${__dirname}/assets`,
+        name: `static`,
+        path: `${__dirname}/static`,
       },
     },
     {
@@ -116,21 +120,10 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-gtag`,
-    //   options: {
-    //     // You can add multiple tracking ids and a pageview event will be fired for all of them.
-    //     trackingIds: [
-    //       blogConfig.gtag.ga, // 설정 Google Analytics / GA
-    //       // "AW-CONVERSION_ID", // Google Ads / Adwords / AW
-    //       // "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
-    //     ],
-    //   },
-    // },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-sitemap',
+    'gatsby-plugin-advanced-sitemap',
   ],
 }

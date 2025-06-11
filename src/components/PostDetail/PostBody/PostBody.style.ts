@@ -5,6 +5,13 @@ export const Container = styled.div`
 `
 
 export const MarkdownRenderer = styled.article`
+  // Renderer Style
+  display: flex;
+  flex-direction: column;
+  width: 768px;
+  margin: 0 auto;
+  min-width: 680px;
+  word-break: break-all;
   ${({ theme: { markdownStyle } }) => markdownStyle}
 `
 

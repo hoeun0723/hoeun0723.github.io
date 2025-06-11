@@ -1,12 +1,5 @@
 import { css } from '@emotion/react'
 const markdownStyle = css`
-  // Renderer Style
-  display: flex;
-  flex-direction: column;
-  width: 768px;
-  margin: 0 auto;
-  min-width: 680px;
-  word-break: break-all;
   // Markdown Style
   line-height: 1.8;
   font-size: 16px;

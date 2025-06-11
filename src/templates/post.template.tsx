@@ -2,6 +2,7 @@ import { graphql } from 'gatsby'
 import React from 'react'
 
 import PostDetail from '@/components/PostDetail'
+import { useSiteMetadata } from '@/hooks/useSiteMetaData'
 import { PostPageItemType } from '@/types/PostItem.types'
 
 interface PostTemplateProps {
@@ -10,14 +11,19 @@ interface PostTemplateProps {
       edges: PostPageItemType[]
     }
   }
+  location: {
+    href: string
+  }
 }
 
 const PostTemplate = ({
   data: {
     allMarkdownRemark: { edges },
   },
+  location: { href },
 }: PostTemplateProps) => {
-  return <PostDetail postPageInfo={edges[0]} />
+  const { author, favicon, seo } = useSiteMetadata()
+  return <PostDetail postPageInfo={edges[0]} href={href} author={author} favicon={favicon} seo={seo} />
 }
 
 export default PostTemplate
@@ -38,6 +44,7 @@ export const queryMarkdownDataBySlug = graphql`
               childImageSharp {
                 gatsbyImageData
               }
+              publicURL
             }
           }
         }

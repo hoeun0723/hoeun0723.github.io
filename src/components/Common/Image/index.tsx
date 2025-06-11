@@ -43,7 +43,6 @@ interface GatsbyImgProps extends Omit<ImageProps, 'src'> {
 }
 
 const Image = ({ src, size = 'm', isCircle = false, ...rest }: ImageProps) => {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const assetImages = useStaticQuery<AssetsImageType>(imageQuery)
 
   const target = useMemo(
@@ -70,7 +69,7 @@ export default Image
 
 const imageQuery = graphql`
   query {
-    images: allFile(filter: { sourceInstanceName: { eq: "assets" } }) {
+    images: allFile(filter: { sourceInstanceName: { eq: "static" } }) {
       edges {
         node {
           relativePath
