@@ -16,31 +16,39 @@ const styles = css`
   }
 
   html {
+    /* global */
     --z-index-top: 999;
+    --z-index-second: 500;
     --padding-xl: 100px;
     --padding-l: 60px;
     --padding-m: 50px;
-    --main-content-width: 768px;
-    --space-s: 8px;
-    --space-m: 12px;
+    --padding-s: 40px;
+    --main-content-width: 760px;
     --space-l: 16px;
+    --space-m: 12px;
+    --space-s: 8px;
     --icon-small: 18px;
     --icon-medium: 24px;
     --icon-large: 36px;
     --icon-xLarge: 64px;
+    /* etc */
+
     @media ${media.medium} {
       --padding-xl: 90px;
+      --padding-l: 40px;
       --padding-m: 30px;
-      --space-s: 6px;
+      --padding-s: 20px;
       --space-m: 10px;
-      --main-content-width: 95%;
+      --space-s: 6px;
+      --main-content-width: 90%;
     }
 
     @media ${media.small} {
       --padding-xl: 80px;
+      --padding-l: 30px;
       --padding-m: 20px;
-      --space-s: 4px;
       --space-m: 8px;
+      --space-s: 4px;
       --main-content-width: 95%;
     }
   }
