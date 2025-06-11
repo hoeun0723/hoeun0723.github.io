@@ -8,6 +8,16 @@ const breakpoints: Record<DeviceType, number> = {
   small: 600,
 }
 
+/**
+ * 사용방법 예시
+ *  export const Header = styled.div`
+ *    height: 400px;
+ *    @media ${({ theme }) => theme.media.medium} {
+ *    height: 300px;
+ *    }
+ *  `
+ */
+
 const media = {
   xLarge: `screen and (max-width: ${breakpoints.xLarge}px)`,
   large: `screen and (max-width: ${breakpoints.large}px)`,
