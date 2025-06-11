@@ -1,14 +1,14 @@
 import Bio from '@/components/Bio'
 import Comment from '@/components/Comment'
 
-import * as S from './PostFooter.style'
+import * as S from '../PostDetail.style'
 
 const PostFooter = () => {
   return (
-    <S.Container>
+    <S.Footer>
       <Bio />
       <Comment />
-    </S.Container>
+    </S.Footer>
   )
 }
 

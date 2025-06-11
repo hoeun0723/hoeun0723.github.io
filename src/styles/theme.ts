@@ -1,6 +1,7 @@
 import { css } from '@emotion/react'
 
 import markdownStyle from './markdown'
+import media from './media'
 
 const calcRem = (size: number): string => `${size / 16}rem`
 
@@ -95,10 +96,11 @@ const typography = {
   `,
 }
 
-const theme = { fonts, typography, markdownStyle }
+const theme = { fonts, typography, markdownStyle, media }
 
 export default theme
 
 export type fonts = typeof fonts
 export type TypographyType = typeof typography
 export type MarkdownStyleType = typeof markdownStyle
+export type MediaType = typeof media

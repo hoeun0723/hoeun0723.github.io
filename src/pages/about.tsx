@@ -13,9 +13,9 @@ const About = () => {
 }
 
 const LayoutStyle = styled.div`
-  width: 768px;
-  height: 80vh;
+  width: var(--main-content-width);
   margin: 0 auto;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;

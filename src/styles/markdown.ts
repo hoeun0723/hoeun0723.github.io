@@ -1,6 +1,7 @@
 import { css } from '@emotion/react'
 const markdownStyle = css`
   // Markdown Style
+  word-break: break-all;
   line-height: 1.8;
   font-size: 16px;
   font-weight: 400;

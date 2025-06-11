@@ -7,8 +7,9 @@ const Footer = () => {
 export default Footer
 
 const Container = styled.footer`
-  margin-top: 32px;
-  padding: 40px 0;
+  margin-top: var(--padding-s);
+  padding: var(--padding-s) 0;
   text-align: center;
-  font-size: 11pt;
+  border-top: 1px solid var(--color-background-secondary);
+  ${({ theme: { typography } }) => typography.textBase}
 `

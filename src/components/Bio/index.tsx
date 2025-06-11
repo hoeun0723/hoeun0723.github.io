@@ -14,7 +14,7 @@ const Bio = () => {
   }
   return (
     <S.Container>
-      <Image src="profile-image.png" isCircle />
+      <Image src="profile-image.png" isCircle size="l" />
       <S.Info>
         <S.Author>{author}</S.Author>
         <S.Desc>{description}</S.Desc>

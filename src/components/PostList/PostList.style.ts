@@ -3,17 +3,12 @@ import { Link } from 'gatsby'
 
 // PostList에 대한 스타일
 export const Container = styled.div`
-  width: 768px;
+  width: var(--main-content-width);
   margin: 0 auto;
-  padding: 50px 0 100px;
+  padding: var(--padding-m) 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    padding: 50px 20px;
-  }
 `
 
 // PostItem에 대한 스타일
@@ -60,13 +55,12 @@ export const Info = styled.span`
 export const Category = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 10px;
   margin: 10px -5px;
+  gap: var(--space-m);
 `
 
 export const CategoryItem = styled.div`
-  margin: 2.5px 5px;
-  padding: 6px 12px;
+  padding: var(--space-s) var(--space-m);
   border-radius: 8px;
   ${({ theme: { typography } }) => typography.textSmall}
   line-height: 18px;
