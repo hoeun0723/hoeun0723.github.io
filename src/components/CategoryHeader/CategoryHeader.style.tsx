@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { ReactNode } from 'react'
 
 export const Container = styled.div`
-  width: 768px;
+  width: var(--main-content-width);
   padding: 1rem;
   margin: 0 auto;
   color: var(--color-heading-text);
@@ -27,13 +27,13 @@ interface GatsbyLinkProps extends CategoryItemProps {
 export const CategoryList = styled.div`
   display: flex;
   flex-wrap: wrap;
+  gap: var(--space-m);
 `
 
 export const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => <Link {...props} />)`
   cursor: pointer;
-  margin-right: 12px;
   border-radius: 8px;
-  padding: 0 6px;
+  padding: 0 var(--space-s);
   ${({ theme: { typography } }) => typography.linkSmall}
   color: var(--color-text);
   background-color: var(--color-category-chip);
