@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
 export const Container = styled.header<{ isHidden: boolean }>`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,8 +14,8 @@ export const Container = styled.header<{ isHidden: boolean }>`
   padding: 1rem 2rem;
   backdrop-filter: blur(5px);
   transition: top 0.5s, opacity 0.5s;
-  z-index: 999;
-  width: 100vw;
+  z-index: var(--z-index-top);
+
   ${({ theme: { typography } }) => typography.linkMedium};
 
   color: var(--color-text);
@@ -45,7 +46,7 @@ export const ThemeSwitchButton = styled.button`
   width: 24px;
   height: 24px;
   > svg {
-    width: 100%;
-    height: 100%;
+    width: var(--icon-medium);
+    height: var(--icon-medium);
   }
 `
