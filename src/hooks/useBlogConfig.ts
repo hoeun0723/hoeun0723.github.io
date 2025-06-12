@@ -39,6 +39,21 @@ const useBlogConfig = () => {
               issueTerm
               async
             }
+            giscus {
+              src
+              data_repo
+              data_repo_id
+              data_category
+              data_category_id
+              data_mapping
+              data_strict
+              data_reactions_enabled
+              data_emit_metadata
+              data_input_position
+              data_theme
+              data_lang
+              crossorigin
+            }
           }
         }
       }
