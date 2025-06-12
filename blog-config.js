@@ -19,6 +19,9 @@ module.exports = {
     google: process.env.GATSBY_SEO_GOOGLE,
     naver: process.env.GATSBY_SEO_NAVER,
   },
+  gtag: {
+    ga: process.env.GATSBY_ANALYTICS_GOOGLE,
+  },
   utterances: {
     src: 'https://utteranc.es/client.js',
     repo: 'hoeun0723/hoeun0723.github.io',
