@@ -59,7 +59,7 @@ const Image = ({ src, size = 'm', isCircle = false, ...rest }: ImageProps) => {
   return <SImage size={size} isCircle={isCircle} image={childImageSharp.gatsbyImageData} alt={publicURL} {...rest} />
 }
 
-const SImage = styled((props: GatsbyImgProps) => <GatsbyImage {...props} />)`
+const SImage = styled(({ isCircle, ...rest }: GatsbyImgProps) => <GatsbyImage {...rest} />)`
   width: ${({ size }) => size && ImageSizeMap[size]};
   height: ${({ size }) => size && ImageSizeMap[size]};
   border-radius: ${({ isCircle }) => isCircle && '50%'};

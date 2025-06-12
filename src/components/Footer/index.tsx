@@ -1,7 +1,10 @@
 import styled from '@emotion/styled'
 
+import useBlogConfig from '@/hooks/useBlogConfig'
+
 const Footer = () => {
-  return <Container>@ 2025 Developer Hoeun, Powered By Gatsby</Container>
+  const { author } = useBlogConfig()
+  return <Container>@ 2025 Developer {author}, Powered By Gatsby.</Container>
 }
 
 export default Footer

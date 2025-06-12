@@ -22,7 +22,7 @@ const styles = css`
     --padding-xl: 100px;
     --padding-l: 60px;
     --padding-m: 50px;
-    --padding-s: 40px;
+    --padding-s: 30px;
     --main-content-width: 760px;
     --space-l: 16px;
     --space-m: 12px;
@@ -32,6 +32,7 @@ const styles = css`
     --icon-large: 36px;
     --icon-xLarge: 64px;
     /* etc */
+    --gnb-height: 64px;
 
     @media ${media.medium} {
       --padding-xl: 90px;

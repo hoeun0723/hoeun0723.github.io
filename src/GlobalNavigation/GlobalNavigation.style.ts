@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 export const Container = styled.header<{ isHidden: boolean }>`
   width: 100%;
+  height: var(--gnb-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
