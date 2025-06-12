@@ -1,12 +1,8 @@
 import { Helmet } from 'react-helmet'
 
-import { ConfigType } from '@/types/gatsby.type'
+import { SEOConfigType } from '@/types/gatsby.type'
 
-interface SEOProps extends Omit<ConfigType, 'social' | 'utterances'> {
-  lang?: string
-}
-
-const SEO = ({ lang = 'ko', author, title, description, siteUrl, image, keywords, favicon, seo }: SEOProps) => {
+const SEO = ({ lang = 'ko', author, title, description, siteUrl, image, keywords, favicon, seo }: SEOConfigType) => {
   return (
     <Helmet htmlAttributes={{ lang }}>
       <title>{title}</title>

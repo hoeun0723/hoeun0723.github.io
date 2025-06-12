@@ -8,7 +8,8 @@ export interface GatsbyImgProps {
   className?: string
 }
 
-export interface ConfigType {
+export interface SEOConfigType {
+  lang?: string
   author: string
   title: string
   siteUrl: string
@@ -16,14 +17,17 @@ export interface ConfigType {
   image: string
   keywords: string[]
   favicon: string
+  seo: {
+    google: string
+    naver: string
+  }
+}
+
+export interface ConfigType extends SEOConfigType {
   social: {
     email: string
     github: string
     til: string
-  }
-  seo: {
-    google: string
-    naver: string
   }
   utterances: {
     src: string
@@ -33,5 +37,20 @@ export interface ConfigType {
     crossorigin: string
     issueTerm: string
     async: string
+  }
+  giscus: {
+    src: string
+    data_repo: string
+    data_repo_id: string
+    data_category: string
+    data_category_id: string
+    data_mapping: string
+    data_strict: string
+    data_reactions_enabled: string
+    data_emit_metadata: string
+    data_input_position: string
+    data_theme: string
+    data_lang: string
+    crossorigin: string
   }
 }
