@@ -11,6 +11,7 @@ export const Container = styled.div`
   box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 15px;
   border: 2px solid var(--color-table-border);
   border-radius: 12px;
+  margin-top: var(--padding-s);
 `
 
 // category list
