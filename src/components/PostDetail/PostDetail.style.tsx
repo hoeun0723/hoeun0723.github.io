@@ -139,6 +139,9 @@ export const Footer = styled.div`
   margin: var(--padding-s) auto;
   border-top: 1px solid var(--color-background-secondary);
   padding-top: var(--padding-s);
+  .giscus-frame {
+    margin-top: var(--padding-s);
+  }
 `
 
 // gatsby-plugin-image 라이브러리에서 제공해주는 GatsbyImage 컴포넌트에는 기본적으로 적용되어있는 인라인 스타일이 존재하는데,
