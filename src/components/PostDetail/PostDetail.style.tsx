@@ -91,6 +91,7 @@ export const TableOfContent = styled.aside`
   height: 100%;
   right: -45%;
   font-size: 0.9rem;
+  max-width: 240px;
   > ul {
     display: inline-block;
     position: sticky;
@@ -99,15 +100,16 @@ export const TableOfContent = styled.aside`
     max-height: 80vh;
     overflow-y: auto;
     word-break: keep-all;
-    border-left: 2px solid var(--color-text);
+    border-left: 1px solid var(--color-text);
+    padding-left: 0%.5rem;
     li {
-      margin: 0 0 0.6rem 0.6rem;
+      margin: 0 0 0.3rem 0.3rem;
       > ul {
-        margin: 0 0 0.6rem 0.6rem;
+        margin: 0 0 0.3rem 0.3rem;
       }
     }
     p {
-      margin: 0 0 0.6rem 0;
+      margin: 0 0 0.3rem 0;
       border-radius: 5px;
     }
     a {
@@ -125,7 +127,7 @@ export const TableOfContent = styled.aside`
     right: 0;
     max-width: 100%;
     > ul {
-      padding-left: 2rem;
+      padding-left: 1rem;
     }
   }
 `
