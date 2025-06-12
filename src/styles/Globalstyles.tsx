@@ -42,6 +42,7 @@ const styles = css`
       --space-m: 10px;
       --space-s: 6px;
       --main-content-width: 90%;
+      --gnb-height: 50px;
     }
 
     @media ${media.small} {
@@ -51,6 +52,7 @@ const styles = css`
       --space-m: 8px;
       --space-s: 4px;
       --main-content-width: 95%;
+      --gnb-height: 50px;
     }
   }
 
