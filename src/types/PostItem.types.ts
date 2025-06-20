@@ -1,4 +1,4 @@
-import { GatsbyImageDataType } from './gatsby.type'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 export type PostFrontmatterType = {
   title: string
@@ -7,7 +7,7 @@ export type PostFrontmatterType = {
   summary: string
   thumbnail: {
     childImageSharp: {
-      gatsbyImageData: GatsbyImageDataType
+      gatsbyImageData: IGatsbyImageData
     }
     publicURL: string
   }

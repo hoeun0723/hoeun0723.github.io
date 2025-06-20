@@ -1,10 +1,10 @@
-import { GatsbyImageDataType } from '@/types/gatsby.type'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 import * as S from '../PostDetail.style'
 import PostHeaderInfo, { PostHeadInfoProps } from './PostHeader.info'
 
 interface PostHeaderProps extends PostHeadInfoProps {
-  thumbnail: GatsbyImageDataType
+  thumbnail: IGatsbyImageData
 }
 
 const PostHeader = ({ title, date, categories, thumbnail, readingTime }: PostHeaderProps) => {
