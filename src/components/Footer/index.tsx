@@ -10,6 +10,7 @@ const Footer = () => {
 export default Footer
 
 const Container = styled.footer`
+  width: 100%;
   margin-top: var(--padding-s);
   padding: var(--padding-s) 0;
   text-align: center;
