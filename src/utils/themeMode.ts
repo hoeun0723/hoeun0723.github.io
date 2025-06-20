@@ -2,7 +2,10 @@ import { isBrowser } from '@/utils'
 
 import browserStorage from './browserStorage'
 
-type ThemeMode = 'dark' | 'light'
+const THEME_MODE_DARK = 'dark' as const
+const THEME_MODE_LIGHT = 'light' as const
+
+type ThemeMode = typeof THEME_MODE_DARK | typeof THEME_MODE_LIGHT
 
 export interface ThemeModeType {
   $body: HTMLElement | undefined
@@ -27,7 +30,7 @@ class ThemeModeHandler implements ThemeModeType {
   themeMode: ThemeMode
   constructor() {
     this.$body = isBrowser ? (document.querySelector('body') as HTMLElement) : undefined
-    this.isDarkMode = initialTheme === 'dark'
+    this.isDarkMode = initialTheme === THEME_MODE_DARK
     this.themeMode = initialTheme
     this.setInitMode()
   }
@@ -35,26 +38,19 @@ class ThemeModeHandler implements ThemeModeType {
     this.$body?.classList.add(initialTheme)
   }
   themeToggler() {
-    this.isDarkMode = isBrowser && this.$body!.classList.contains('dark')
+    this.isDarkMode = this.$body!.classList.contains(THEME_MODE_DARK)
     if (this.isDarkMode) {
-      this.setLightMode()
+      this.setMode(THEME_MODE_LIGHT)
     } else {
-      this.setDarkMode()
+      this.setMode(THEME_MODE_DARK)
     }
   }
-  setDarkMode() {
-    this.$body?.classList.remove('light')
-    this.$body?.classList.add('dark')
-    browserStorage.set('theme', 'dark')
-    this.isDarkMode = true
-    this.themeMode = 'dark'
-  }
-  setLightMode() {
-    this.$body?.classList.remove('dark')
-    this.$body?.classList.add('light')
-    browserStorage.set('theme', 'light')
-    this.isDarkMode = false
-    this.themeMode = 'light'
+  setMode(themeMode: ThemeMode) {
+    this.$body?.classList.remove(THEME_MODE_LIGHT, THEME_MODE_DARK)
+    this.$body?.classList.add(themeMode)
+    browserStorage.set('theme', themeMode)
+    this.isDarkMode = themeMode === THEME_MODE_DARK
+    this.themeMode = themeMode
   }
 }
 
