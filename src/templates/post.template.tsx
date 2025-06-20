@@ -2,7 +2,6 @@ import { graphql } from 'gatsby'
 import React from 'react'
 
 import PostDetail from '@/components/PostDetail'
-import useBlogConfig from '@/hooks/useBlogConfig'
 import { PostPageItemType } from '@/types/PostItem.types'
 
 interface PostTemplateProps {
@@ -22,8 +21,7 @@ const PostTemplate = ({
   },
   location: { href },
 }: PostTemplateProps) => {
-  const { author, favicon, seo } = useBlogConfig()
-  return <PostDetail postPageInfo={edges[0]} href={href} author={author} favicon={favicon} seo={seo} />
+  return <PostDetail postPageInfo={edges[0]} href={href} />
 }
 
 export default PostTemplate
