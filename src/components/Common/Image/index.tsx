@@ -1,9 +1,7 @@
 import styled from '@emotion/styled'
-import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
-import { useMemo } from 'react'
 
-import { GatsbyImageDataType } from '@/types/gatsby.type'
+import useStaticImage from '@/hooks/useStaticImage'
 
 const ImageSizeMap = {
   s: 'var(--icon-medium)',
@@ -19,37 +17,14 @@ interface ImageProps {
   isCircle?: boolean
 }
 
-interface ImageNode {
-  node: {
-    relativePath: string
-    extension: string
-    publicURL: string
-    childImageSharp: {
-      gatsbyImageData: IGatsbyImageData
-    }
-  }
-}
-
-interface AssetsImageType {
-  images: {
-    edges: ImageNode[]
-  }
-}
-
 interface GatsbyImgProps extends Omit<ImageProps, 'src'> {
-  image: GatsbyImageDataType
+  image: IGatsbyImageData
   alt: string
   className?: string
 }
 
 const Image = ({ src, size = 'm', isCircle = false, ...rest }: ImageProps) => {
-  const assetImages = useStaticQuery<AssetsImageType>(imageQuery)
-
-  const target = useMemo(
-    () => assetImages.images.edges.find(({ node }) => src === node.relativePath),
-    [assetImages, src],
-  )
-
+  const target = useStaticImage({ src })
   if (!target) return null
 
   const {
@@ -70,20 +45,3 @@ const SImage = styled(({ isCircle, ...rest }: GatsbyImgProps) => <GatsbyImage {.
 `
 
 export default Image
-
-const imageQuery = graphql`
-  query {
-    images: allFile(filter: { sourceInstanceName: { eq: "static" } }) {
-      edges {
-        node {
-          relativePath
-          extension
-          publicURL
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
-          }
-        }
-      }
-    }
-  }
-`
