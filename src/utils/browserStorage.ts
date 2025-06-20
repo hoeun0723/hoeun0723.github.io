@@ -1,7 +1,9 @@
 import { isBrowser } from '@/utils'
-export interface BrowserStorage {
-  set: <T extends string>(key: string, value: T) => void
-  get: <T extends string | object>(key: string) => T | null
+type BrowserStorageValue<T> = T extends string ? string : Record<string, unknown>
+
+interface BrowserStorage {
+  set: <T extends string | Record<string, unknown>>(key: string, value: T) => void
+  get: <T extends string | Record<string, unknown>>(key: string) => BrowserStorageValue<T> | null
   reset: () => void
 }
 
@@ -11,9 +13,14 @@ const browserStorage: BrowserStorage = {
     isBrowser && localStorage.setItem(key, serializedValue)
   },
   get: key => {
-    const value = isBrowser && localStorage.getItem(key)
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return value ? JSON.parse(value) : null
+    const item = isBrowser ? localStorage.getItem(key) : null
+    if (item === null) return null
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+      return JSON.parse(item)
+    } catch {
+      return item
+    }
   },
   reset: () => {
     isBrowser && localStorage.clear()
