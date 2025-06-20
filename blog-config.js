@@ -3,11 +3,13 @@ require('dotenv').config({
 })
 
 module.exports = {
+  lang: 'ko',
   siteName: `Hoeun.blog`,
   author: 'Hoeun(WangHoeun)',
   description: `안녕하세요. 프론트엔드 개발자 왕호은입니다. 꾸준한 성장을 좋아합니다.`,
   siteUrl: 'https://hoeun0723.github.io',
-  image: `./static/profile-image.png`,
+  profileImage: `profile-image.png`,
+  mainOgImage: `main-og-image.png`,
   keywords: ['개발블로그', '포트폴리오', 'gatsby'],
   favicon: './static/pencil.png',
   social: {

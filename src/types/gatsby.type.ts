@@ -1,35 +1,41 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 
-export type GatsbyImageDataType = IGatsbyImageData
-
 export interface GatsbyImgProps {
-  image: GatsbyImageDataType
+  image: IGatsbyImageData
   alt: string
   className?: string
 }
 
 export interface SEOConfigType {
-  lang?: string
-  author: string
-  siteName: string
-  siteUrl: string
   title?: string
-  description: string
-  image: string
-  keywords: string[]
-  favicon: string
-  seo: {
-    google: string
-    naver: string
-  }
+  pathname?: string
+  description?: string
+  image?: string
+  keywords?: string[]
   readingTime?: string
 }
 
-export interface ConfigType extends SEOConfigType {
+/**
+ * blog-config.js의 정보 타입
+ */
+export interface ConfigType {
+  lang: 'ko' | 'en'
+  author: string
+  siteName: string
+  description: string
+  siteUrl: string
+  profileImage: string
+  mainOgImage: string
+  keywords: string[]
+  favicon: string
   social: {
     email: string
     github: string
     til: string
+  }
+  seo: {
+    google: string
+    naver: string
   }
   utterances: {
     src: string

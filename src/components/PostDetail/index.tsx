@@ -1,5 +1,4 @@
 import PostFooter from '@/components/PostDetail/PostFooter'
-import useBlogConfig from '@/hooks/useBlogConfig'
 import Layout from '@/Layout'
 import { PostPageItemType } from '@/types/PostItem.types'
 
@@ -9,11 +8,10 @@ import SEO from '../SEO'
 
 interface PostPageInfoProps {
   postPageInfo: PostPageItemType
-  href: string
+  pathname: string
 }
 
-const PostDetail = ({ postPageInfo, href }: PostPageInfoProps) => {
-  const { author, favicon, seo, siteName } = useBlogConfig()
+const PostDetail = ({ postPageInfo, pathname }: PostPageInfoProps) => {
   const {
     node: {
       tableOfContents,
@@ -35,15 +33,11 @@ const PostDetail = ({ postPageInfo, href }: PostPageInfoProps) => {
   return (
     <Layout>
       <SEO
-        author={author}
-        siteUrl={href}
-        siteName={siteName}
         title={title}
+        pathname={pathname}
         description={summary}
         image={publicURL}
         keywords={categories}
-        favicon={favicon}
-        seo={seo}
         readingTime={readingTime.text}
       />
       <PostHeader

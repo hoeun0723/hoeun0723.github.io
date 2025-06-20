@@ -11,7 +11,7 @@ interface PostTemplateProps {
     }
   }
   location: {
-    href: string
+    pathname: string
   }
 }
 
@@ -19,9 +19,9 @@ const PostTemplate = ({
   data: {
     allMarkdownRemark: { edges },
   },
-  location: { href },
+  location: { pathname },
 }: PostTemplateProps) => {
-  return <PostDetail postPageInfo={edges[0]} href={href} />
+  return <PostDetail postPageInfo={edges[0]} pathname={pathname} />
 }
 
 export default PostTemplate

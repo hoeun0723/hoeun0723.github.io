@@ -6,7 +6,6 @@ import CategoryHeader from '@/components/CategoryHeader'
 import { CategoryListProps } from '@/components/CategoryHeader/CategoryList'
 import PostList from '@/components/PostList'
 import SEO from '@/components/SEO'
-import useBlogConfig from '@/hooks/useBlogConfig'
 import Layout from '@/Layout'
 import { PostListItemType, PostType } from '@/types/PostItem.types'
 
@@ -28,7 +27,6 @@ const IndexPage = ({
     allMarkdownRemark: { edges },
   },
 }: IndexPageProps) => {
-  const { author, siteName, siteUrl, description, image, keywords, favicon, seo } = useBlogConfig()
   const parsed: ParsedQuery<string> = queryString.parse(hash)
   const selectedCategory = typeof parsed.category !== 'string' || !parsed.category ? 'All' : parsed.category
   // category 프로퍼티 값이 문자열 형태가 아니거나 존재하지 않는 경우에는 기본적으로 카테고리 값을 All로 지정하고, 그러지 않은 경우에는 파싱한 값을 지정
@@ -58,16 +56,7 @@ const IndexPage = ({
   )
   return (
     <Layout>
-      <SEO
-        author={author}
-        siteUrl={siteUrl}
-        siteName={siteName}
-        description={description}
-        image={image}
-        keywords={keywords}
-        favicon={favicon}
-        seo={seo}
-      />
+      <SEO />
       <CategoryHeader selectedCategory={selectedCategory} categoryList={categoryList} />
       <PostList selectedCategory={selectedCategory} posts={edges} />
     </Layout>
