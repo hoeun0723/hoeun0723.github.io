@@ -2,11 +2,12 @@ import { css } from '@emotion/react'
 const markdownStyle = css`
   // Markdown Style
   word-break: break-all;
-  line-height: 1.8;
-  font-size: 16px;
-  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--color-text);
   background-color: var(--color-background);
+
   // Apply Padding Attribute to All Elements
   p {
     padding: 3px 0;
@@ -173,6 +174,14 @@ const markdownStyle = css`
     hr {
       margin: 50px 0;
     }
+  }
+
+  // added for image resizing
+  img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    position: relative !important;
   }
 `
 

@@ -56,7 +56,8 @@ const styles = css`
     }
   }
 
-  body {
+  body,
+  body.light {
     --color-background: #f3f5f7;
     --color-background-secondary: #ffffff;
     --color-category-chip: #eceef1;
