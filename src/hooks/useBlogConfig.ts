@@ -18,7 +18,8 @@ const useBlogConfig = () => {
             siteName
             description
             siteUrl
-            image
+            profileImage
+            mainOgImage
             keywords
             favicon
             social {
