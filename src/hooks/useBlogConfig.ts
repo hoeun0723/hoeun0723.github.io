@@ -15,7 +15,7 @@ const useBlogConfig = () => {
         site {
           siteMetadata {
             author
-            title
+            siteName
             description
             siteUrl
             image
