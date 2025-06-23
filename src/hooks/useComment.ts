@@ -18,12 +18,7 @@ const useComment = () => {
   const { isDarkMode } = useThemeModeProviderState()
   const { giscus: CONFIG } = useBlogConfig()
   const commentTheme = isDarkMode ? 'dark' : 'light'
-  const $commentElement = useRef<HTMLDivElement>(null)
-  const $iframe = useRef<HTMLIFrameElement | null>(null)
-
-  const setIframeElement = () => {
-    $iframe.current = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement
-  }
+  const $commentElementRef = useRef<HTMLDivElement>(null)
 
   const createScriptElement = () => {
     const $script: HTMLScriptElement = document.createElement('script')
@@ -32,8 +27,7 @@ const useComment = () => {
     Object.entries(attributes).forEach(([key, value]) => {
       $script.setAttribute(key, value)
     })
-    $commentElement.current?.appendChild($script)
-    setIframeElement()
+    $commentElementRef.current?.appendChild($script)
   }
 
   const setCommentTheme = ($iframe: HTMLIFrameElement) => {
@@ -50,10 +44,12 @@ const useComment = () => {
   }
 
   useEffect(() => {
-    if ($commentElement.current === null) return
-    $iframe.current ? setCommentTheme($iframe.current) : createScriptElement()
-  }, [isDarkMode, $iframe])
-  return { $commentElement }
+    if ($commentElementRef.current === null) return
+    const $iframe = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement
+    $iframe ? setCommentTheme($iframe) : createScriptElement()
+  }, [isDarkMode])
+
+  return { $commentElementRef }
 }
 
 export default useComment

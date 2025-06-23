@@ -1,9 +1,9 @@
 import useComment from '@/hooks/useComment'
 
 const Comment = () => {
-  const { $commentElement } = useComment()
+  const { $commentElementRef } = useComment()
 
-  return <div ref={$commentElement} />
+  return <div ref={$commentElementRef} />
 }
 
 export default Comment
