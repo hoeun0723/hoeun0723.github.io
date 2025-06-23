@@ -1,7 +1,7 @@
 ---
 date: '2023-12-03'
 title: '[SOPT] 33기 솝커톤 후기 (최우수상/인기상)'
-categories: ['회고', '에세이', 'SOPT']
+categories: ['에세이', 'SOPT']
 summary: '간절하게 원했던 SOPT 동아리에 합격한 과정과 경험을 공유하며 앞으로 SOPT에 지원하시는 분들에게 도움을 줄 수 있으면 하는 바람으로 글을 작성해 봅니다.'
 thumbnail: './image.png'
 ---

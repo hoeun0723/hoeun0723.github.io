@@ -1,7 +1,7 @@
 ---
 date: '2023-10-14'
 title: 'DO-SOPT 1주차 후기'
-categories: ['회고', '에세이', 'SOPT']
+categories: ['에세이', 'SOPT']
 summary: 'SOPT 활동한 경험을 공유하며 앞으로 SOPT에 지원하시는 분들에게 도움을 줄 수 있으면 하는 바람으로 글을 작성해 봅니다.'
 thumbnail: './image.png'
 ---

@@ -1,7 +1,7 @@
 ---
 date: '2024-01-28'
 title: '구름톤 in Jeju 8기 마지막 4일차 + 회고 (2023.12.01~)'
-categories: ['회고', '에세이', '구름톤']
+categories: ['에세이', '구름톤']
 summary: '구름톤 in Jeju에 지원하시는 분들에게 도움을 줄 수 있으면 하는 바람으로 글을 작성해 봅니다.'
 thumbnail: './thumbnail.png'
 ---
