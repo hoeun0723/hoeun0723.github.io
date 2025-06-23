@@ -1,7 +1,7 @@
 ---
 date: '2024-08-05'
 title: '[초심자를 위한] Github(issue,milestone,pr)와 브랜치 전략 등 협업하기'
-categories: ['공부', 'WEB']
+categories: ['초심자를 위한', 'github', 'branch전략', '협업']
 summary: 'Github(issue,milestone,pr)와 브랜치 전략 등 협업하기 에 대하여 초심자분들이 이해하기 쉽도록 작성한 내용입니다.'
 thumbnail: './thumbnail.png'
 ---
