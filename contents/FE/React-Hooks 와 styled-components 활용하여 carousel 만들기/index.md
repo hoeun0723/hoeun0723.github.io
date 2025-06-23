@@ -1,7 +1,7 @@
 ---
 date: '2023-11-06'
 title: 'React-Hooks 와 styled-components 활용하여 carousel 만들기'
-categories: ['FE', '문제해결']
+categories: ['FE', '문제해결', 'carousel', 'hooks', 'styled-components']
 summary: 'React-Hooks 와 styled-components 활용하여 carousel 만들기를 정리한 내용입니다.'
 thumbnail: './thumbnail.png'
 ---
