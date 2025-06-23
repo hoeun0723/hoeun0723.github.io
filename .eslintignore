@@ -3,3 +3,5 @@ gatsby-config.js
 gatsby-node.js
 gatsby-ssr.js
 blog-config.js
+
+src/**/*.woff2

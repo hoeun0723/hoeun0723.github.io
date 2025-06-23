@@ -1,14 +1,11 @@
 import { Global, css } from '@emotion/react'
 
-import fonts from '@/fonts'
-
 import media from './media' // css(@emotion/react)에서 theme를 전달받지 못해서 직접 import해서 사용
 import Normalize from './Normalize'
 
 const styles = css`
-  ${fonts}
   ${Normalize}
-   * {
+  * {
     font-family: 'AppleSDGothicNeo', 'Noto Sans', 'sans-serif';
     box-sizing: border-box;
     margin: 0;
