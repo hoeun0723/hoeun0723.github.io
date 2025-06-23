@@ -29,7 +29,7 @@ const styles = css`
     --icon-large: 36px;
     --icon-xLarge: 64px;
     /* etc */
-    --gnb-height: 64px;
+    --gnb-height: 70px;
 
     @media ${media.medium} {
       --padding-xl: 90px;
@@ -68,6 +68,7 @@ const styles = css`
     --color-table-background-color-second: #f6f8fa;
     --color-table-border: #d0d7de;
     --color-navigation-shadow: rgba(0, 0, 0, 0.08);
+
     --color-primary: #218bff;
     --color-secondary: #54aeff;
     /* --color-tertiary: */
@@ -77,6 +78,7 @@ const styles = css`
     --color-gray-1000: #21232c;
     --color-overlay: #61646bcc;
   }
+
   body.dark {
     --color-background: #242629;
     --color-background-secondary: #151519;
@@ -91,10 +93,12 @@ const styles = css`
     --color-table-background-color-second: #0d1117;
     --color-table-border: #424242;
     --color-navigation-shadow: rgba(0, 0, 0, 0.08);
+
     --color-primary: #79c0ff;
     --color-secondary: #1f6feb;
     /* --color-tertiary:  */
   }
+
   button,
   input,
   select,
@@ -112,6 +116,7 @@ const styles = css`
     height: 100%;
     scroll-behavior: smooth;
   }
+
   a,
   a:hover,
   button {
@@ -119,6 +124,7 @@ const styles = css`
     text-decoration: none;
     cursor: pointer;
   }
+
   ul,
   li {
     padding: 0;
