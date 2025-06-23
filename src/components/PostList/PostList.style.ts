@@ -62,7 +62,7 @@ export const Category = styled.div`
 export const CategoryItem = styled.div`
   padding: var(--space-s) var(--space-m);
   border-radius: 8px;
-  ${({ theme: { typography } }) => typography.textSmall}
+  ${({ theme: { typography } }) => typography.linkSmall}
   line-height: 18px;
   background-color: var(--color-category-chip);
   color: var(--color-text);
