@@ -1,6 +1,6 @@
 ---
 date: '2024-07-18'
-title: '[Javascript] sExecution context & Closure'
+title: '[Javascript] Execution context & Closure'
 categories: ['공부', 'Javascript']
 summary: 'Execution context & Closure 에 대하여 학습하고 정리한 내용입니다.'
 thumbnail: './thumbnail.png'
