@@ -18,7 +18,6 @@
 @font-face {
   font-family: 'AppleSDGothicNeo';
   font-weight: 300;
-  font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
   src: url(/fonts/AppleSDGothicNeoL.woff2) format('woff2');
@@ -42,7 +41,6 @@
 @font-face {
   font-family: 'AppleSDGothicNeo';
   font-weight: 600;
-  font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
   src: url(/fonts/AppleSDGothicNeoSB.woff2) format('woff2');
@@ -58,7 +56,6 @@
 @font-face {
   font-family: 'AppleSDGothicNeo';
   font-weight: 800;
-  font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
   src: url(/fonts/AppleSDGothicNeoEB.woff2) format('woff2');
@@ -66,7 +63,6 @@
 @font-face {
   font-family: 'AppleSDGothicNeo';
   font-weight: 900;
-  font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
   src: url(/fonts/AppleSDGothicNeoH.woff2) format('woff2');

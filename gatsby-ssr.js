@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const functionToScript = callbackFn => String(callbackFn)
 
@@ -21,9 +21,16 @@ const setInitThemeModeScript = functionToScript(setInitThemeMode)
 const codeRunOnClient = `(${setInitThemeModeScript})()`
 
 const MagicScriptTag = () => {
-  return <script dangerouslySetInnerHTML={{__html: codeRunOnClient}}/>
+  return <script dangerouslySetInnerHTML={{ __html: codeRunOnClient }} />
 }
 
-export const onRenderBody = ({setPreBodyComponents}) => {
-  setPreBodyComponents(<MagicScriptTag key="setInitThemeMode-script"/>)
+// 주로 사용하는 폰트들
+const FONTS = ['/fonts/AppleSDGothicNeoR.woff2', '/fonts/AppleSDGothicNeoM.woff2', '/fonts/AppleSDGothicNeoB.woff2']
+
+const fontsLinks = FONTS.map(font => (
+  <link rel="preload" href={font} as="font" type="font/woff2" crossOrigin="anonymous" key="interFont" />
+))
+
+export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
+  setHeadComponents(fontsLinks), setPreBodyComponents(<MagicScriptTag key="setInitThemeMode-script" />)
 }
