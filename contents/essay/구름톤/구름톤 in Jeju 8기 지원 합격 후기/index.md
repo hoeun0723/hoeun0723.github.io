@@ -115,4 +115,4 @@ thumbnail: './thumbnail.png'
 
 그럼 이상 끝 !
 
-[**구름톤 1일차 후기 보러가기**](<https://hoeun0723.github.io/essay/구름톤/구름톤%20in%20Jeju%208기%20후기%201일차(2023.11.28)/>)
+[**구름톤 1일차 후기 보러가기**](<https://hoeun0723.github.io/essay/구름톤/구름톤%20in%20Jeju%208기%20후기%201일차(2023.11.28)>)
