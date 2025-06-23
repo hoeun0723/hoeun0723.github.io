@@ -32,5 +32,6 @@ const fontsLinks = FONTS.map(font => (
 ))
 
 export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
-  setHeadComponents(fontsLinks), setPreBodyComponents(<MagicScriptTag key="setInitThemeMode-script" />)
+  // setHeadComponents(fontsLinks),
+  setPreBodyComponents(<MagicScriptTag key="setInitThemeMode-script" />)
 }
