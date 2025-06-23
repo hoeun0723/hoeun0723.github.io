@@ -7,7 +7,7 @@ const markdownStyle = css`
   word-break: break-all;
   line-height: 1.5;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 300;
   color: var(--color-text);
   background-color: var(--color-background);
   margin: 2rem 0;
