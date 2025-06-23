@@ -1,7 +1,7 @@
 ---
 date: '2023-11-06'
-title: '[React] react-hook-form (register/handleSubmit/setError)'
-categories: ['React']
+title: 'react-hook-form (register/handleSubmit/setError)'
+categories: ['FE', '문제해결']
 summary: 'react-hook-form (register/handleSubmit/setError) 문제 해결을 정리한 내용입니다.'
 thumbnail: './thumbnail.png'
 ---
