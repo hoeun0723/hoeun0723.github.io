@@ -6,7 +6,7 @@ import ThemeSwitchButton from './ThemeSwitchButton'
 
 const ROUTE_LINKS = [
   { label: 'Home', url: '/' },
-  { label: 'About', url: '/about' },
+  { label: 'About', url: 'https://buly.kr/90b9X3J' },
 ]
 
 const GlobalNavigation = () => {
